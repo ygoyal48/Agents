@@ -13,6 +13,10 @@
 > **Context of the source:** Indian equities (BSE/NSE), bottom-up fundamental value investing, retail/long-term horizon,
 > data source = screener.in. Currency ₹. "cr" = crore = 10 million. "lakh" = 0.1 million. Numbers in examples are circa 2014–2020.
 > Interest-rate / G-Sec numbers must be refreshed to current values at decision time (see §5).
+>
+> **Built from two sources:** (1) the *Peaceful Investing* method book (framework — §1–§16), and (2) the *Case Studies* ebook
+> (20 real worked verdicts — see **§17**, the example library). §17 is my fast pattern-match reference: when analyzing any company,
+> find the closest case there and copy its reasoning. Refinements discovered in the case studies are folded into §1–§16 and tagged **[CS]**.
 
 ---
 
@@ -96,6 +100,14 @@ Market Capitalization    > 25 cr
 - Current ratio components: CA = inventory + cash/equivalents + receivables + short-term loans; CL = payables + short-term provisions.
 - #8 is **mandatory for every company.** Over 1 year PAT≠CFO (credit sales), but over 10 yrs they must converge. If CFO chronically lags PAT → either uncollectable receivables or fictitious profit → avoid.
 
+**[CS] Field-tested refinements (from the case-study ebook — apply these every time):**
+- **Distrust OPM vs NPM divergence.** Stable OPM but *low/volatile NPM* means interest (debt) and/or tax is eating equity returns — the business runs for lenders/government, not shareholders. *Meghmani:* OPM 14–16% stable but NPM only 2–3% (interest ₹16cr→₹75cr). → weak.
+- **Strip non-operating income before trusting NPM.** Forex gains, interest/dividend on cash, one-offs inflate reported NPM. Recompute NPM on operating profit only. *Torrent Pharma:* ₹253cr forex gain = 27% of PBT; reported NPM 16% but true ~11.8%.
+- **Normalize NPM for tax incentives.** A very low tax rate (SEZ/area-based/sector incentive) inflates NPM and is *temporary*. Recompute NPM at full ~30% tax and ask "is it still good when the incentive expires?" *Kaveri* tax 3–5%, *Emami* 12–18%, *Torrent* 20–25%. Flag incentive expiry dates.
+- **Low NPM + Low Fixed-Asset-Turnover = capital-intensive debt trap.** This combo means each rupee of growth needs heavy capex but throws off little profit → must borrow → debt spiral. *Meghmani, Fiem, Sarla* all followed this into rising debt. Avoid unless efficiency is durably improving.
+- **PBT/NFA test (earns-less-than-an-FD).** Compute Profit-Before-Tax ÷ Net Fixed Assets. If it's **below the bank fixed-deposit rate**, the company earns less by operating a whole business than the assets would in a deposit → structurally poor. *Meghmani:* PBT/NFA <9% (below FD). Strong reject signal even at low P/E.
+- **Tax in P&L vs tax in cash flow.** Cross-check the P&L tax charge is actually *paid out* as cash tax in the cash-flow statement (not just an accrual). Persistent gap = aggressive accounting.
+
 **GOOD looks like — Vinati Organics (VOL), the archetypal pass:**
 - Sales ₹49cr (2005) → ₹696cr (2014) = **34% CAGR** ✓ (and quantity-driven, see §6)
 - OPM rose 15%→24% then stable ~22%; NPM 7%→17% then stable ~12% ✓ (>8%)
@@ -134,6 +146,13 @@ Market Capitalization    > 25 cr
 - **Non-standard "vanity" metrics** as headline (same-store-sales, ARPU, subscriber adds, order book, EBITDA-instead-of-PAT, "cash earnings") — definitions get bent. Trust standard PAT/CFO/FCF.
 
 **Verdict rule:** Treat #1 (cCFO<cPAT), the Rising-Sales+Receivables+Debt combo, High-cash+High-debt, and serial acquisitions as **near-automatic rejects**. Never rely on awards/ratings to vouch integrity (Satyam won a Golden Peacock governance award before its fraud broke).
+
+**[CS] Field-tested refinements:**
+- **High cash + rising debt = treasury arbitrage or fictitious cash.** Paying ~10% interest while sitting on idle cash is irrational; either the "cash" is fake/siphoned, or the company is playing a treasury game it shouldn't. *Torrent:* ~₹900cr debt rise mirrored by ~₹900cr cash/investment rise (~₹100cr/yr avoidable interest). *Hindustan Media:* ₹587cr cash yet raised ₹78cr fresh debt. Non-financial companies should deploy cash in the business, not arbitrage. → deep scrutiny.
+- **Read the receivables AGEING, not just DSO.** Pull the schedule: what % is outstanding **>6 months**, and is the company **writing receivables off**? *Kaveri:* 68% (₹120cr of ₹176.8cr) >6 months, writing off ₹4–4.5cr/yr. → cash never coming.
+- **Standalone vs consolidated receivables.** If standalone receivables >> consolidated, the parent is selling to its own subsidiaries that collect from end-customers but **don't remit cash back**. *Torrent:* ₹222cr standalone >6-month receivables, only ₹16cr consolidated → US/Brazil/Romania subs parking cash abroad while India borrows.
+- **Contingent liabilities / off-balance-sheet guarantees.** Corporate guarantees given for loans of *non-subsidiary group companies* = the company is on the hook with no benefit to its shareholders. *Virat Crane:* guarantees ₹10cr + ₹13.24cr for group cos. Read the contingent-liability note every time.
+- **Annual-report quality is a tell.** Auditor's report omitting disputed dues the company itself disclosed (*Kaveri*), unspent mandatory CSR with a frivolous excuse (*Kaveri*), missing company secretary / auditor-flagged Companies-Act non-compliance left unfixed for years (*Rexnord §178, Virat Crane §203*), even spelling mistakes in the AR (*Virat Crane*) → low governance quality. Company-secretary *resignation* often precedes trouble.
 
 ---
 
@@ -208,6 +227,7 @@ Where (use **3-year averages** of each input to smooth one-year noise):
 - **High-P/E trap (why I avoid P/E >20–25):** capital gain = earnings growth + P/E change. If P/E is already high, future P/E *expansion* is ~nil and P/E *contraction* risk is large. Even a flawless 25% grower bought at P/E 50 returns only ~17%/yr for a decade *if everything goes right* — and collapses if growth disappoints. **Low P/E is where high-return-low-risk lives.**
 - **Why low P/E wins (quantified):** Mayur Uniquoters bought at P/E 6.6 → IRR 136%, of which earnings growth = 32% and **P/E expansion = 104%** (≈75% of return). Vinati at P/E 7.7 → IRR 143%, earnings 27% + **P/E expansion 116%** (≈81%). The re-rating from cheap→fair (driven by analyst coverage, credit upgrades, institutional buying) is the bulk of the return. Buy *before* discovery.
 - **Industry P/E is IRRELEVANT** as a valuation anchor. Spread *within* an industry is enormous — e.g. Cement-Major "industry P/E 38.76" spans Prism 396 down to Saurashtra 5.7; Private Banks "18.36" spans Kotak 63 down to Karnataka 4.1; Cigarettes "26.42" spans Godfrey 34 down to Raghunath 3.8. Good companies trade richer than poor ones in the *same* industry. Do **not** assume a stock "deserves" the industry P/E (mean reversion often fails). Judge each company on its own P/E vs its own fundamentals.
+- **[CS] Beware the VALUE TRAP — a low P/E is not automatically a buy.** Cheap P/E + high dividend yield can hide a business whose value is *eroding*. Cross-check: is market cap *growing* over 10 yrs (value-creation ≥ ₹1 per ₹1 retained), or shrinking? *Noida Toll Bridge:* P/E 5.6, DY ~12% — looks great, but MCap *fell* ₹189cr over 10 yrs (vs ₹214cr retained) and faces competing-bridge threats → value trap, the capital loss swamps the dividend. *Meghmani:* P/E 9.9 but PBT/NFA below FD rate → cheap for a reason. Low P/E only wins on a *fundamentally sound* company temporarily undiscovered — not on a structurally weak/declining one. Don't be lured by dividend yield alone while capital erodes.
 
 ### 5b. The 4 Principles — compute the *target investable P/E*
 
@@ -251,6 +271,12 @@ High growth alone is NOT enough — it must pass **all 5 moat tests** (else it's
 - **Product diversification → prefer PURE PLAY** (one segment, or closely-related products). Unrelated diversification (conglomerate sprawl) = **strict NO** (buy different stocks for diversification, don't want it inside one company).
 - **No government interference in pricing/profitability** — avoid (or sell) companies whose prices/margins are capped by regulators or who are *forced to supply* certain clients (e.g. PNGRB gas-price/allocation actions hurting Gujarat State Petronet, IGL, Haldyn Glass).
 
+**[CS] Field-tested refinements:**
+- **Check the FX direction of the business model.** Importing inputs in USD and selling output domestically in INR is a *structural loser* when INR depreciates (costs rise, prices can't). The winning model is the reverse: source in India, sell/export in USD. *Merck India* (import raw material in USD, sell in INR) saw OPM collapse 24–26%→7% as INR fell 60%, while Indian pharma exporters thrived on the same move. Read the import%/export% split.
+- **Verify "macro headwind" excuses against PEERS.** When management blames the economy for weak results, compare with industry peers. If peers slumped too, management is probably right; if only this company slumped, it's an execution/competitiveness problem. (*Supreme Industries* — peers also slowed, so the macro excuse held.)
+- **Regulatory-dependent / one-shot-demand businesses are speculation, not investment.** Growth driven by subsidies/policy (and >30–35% spikes) reverses violently when policy turns. *Ujaas Energy:* solar sales spiked 7× then crashed 80% on policy change; CFO went negative; debt ₹2cr→₹120cr. Wide swings in efficiency ratios = business model not yet established → wait for stability.
+- **A brand is only a moat if it shows up as *higher, consistent margins than peers*.** Don't credit "brand value" abstractly — verify superior OPM/NPM vs competitors, year on year. (Asked of *Supreme*; demonstrated by *Emami* brand shares 49–76% with 24–25% OPM, *KRBL* India Gate premium with stable 14–15% OPM.)
+
 ---
 
 ## 7. MANAGEMENT ANALYSIS (Stage 6 — HARD VETO GATE, the MOST important factor)
@@ -282,7 +308,17 @@ High growth alone is NOT enough — it must pass **all 5 moat tests** (else it's
 | **FII/institutional shareholding** | per checklist, *lower the better* (undiscovered = re-rating upside) | (note: once an institution crosses **25%** it gains strategic influence — track it) |
 | **Pledged promoter shares** | **0%** | **Any pledge = caution** (first sign of promoter/company financial stress; forced selling risk). Generally avoid pledged-promoter companies. |
 
-**Verdict:** management is a **hard veto.** If integrity is in any doubt (fraud history, self-dealing RPT, warrant abuse, debt-funded dividends to self) → **REJECT**, even with flawless financials/valuation. "Investment in a great business is futile if management isn't shareholder-friendly." Never trust awards/ratings as proof of integrity.
+**[CS] Field-tested refinements (management — these caught real problems in the case studies):**
+- **Test "independent" directors for *real* independence.** Cross-check each independent director against the promoters' private companies via the MCA / **Zauba Corp** database. If the "independent" director sits on the promoters' private entities, he is independent only on paper. *National Fittings:* "independent" director Loganathan was a director on nearly all the promoter's private companies; effectively 3 of 4 directors were promoter-aligned (75%). Also discount long-time-employee directors as non-independent.
+- **Related-party purchasing/sourcing from promoter entities = quiet leakage.** Buying raw material / leasing premises from holding/promoter companies routes margin out of the listed company. *National Fittings:* bought ₹19.86cr rough castings from holding co Interfit + leased land from it (~₹2cr/yr leakage) and gave ₹2.7cr interest-free advances to related parties. Quantify the leakage (assume ~10% margin on RPT purchases).
+- **MNC subsidiary milked by the parent.** A foreign-parent subsidiary can be drained via dividends exceeding FCF and via stingy India capex. *Merck India:* paid ₹341cr dividends on only ₹167cr FCF (funded by liquidating its own FDs; FY2010 div ₹158cr vs PAT ₹63cr) — parent Merck Group the main beneficiary, minimal India growth investment. Also watch **brand-buy-from-parent** RPTs (*Hindustan Media* paying ₹62cr to parent HT Media for brands it licensed for ₹1 lakh).
+- **Promoter salary near the statutory ceiling / ~15% of PAT = red flag even in a good company.** *Ratnamani:* gross management salary ₹26.94cr vs Companies-Act ceiling ₹28.44cr, on PAT ₹172cr (~15.7%) — the one weak spot in an otherwise strong company. (Norm is 2–4% of PAT.)
+- **Declining promoter stake → investigate before buying.** *Kaveri:* promoters cut stake 63.64%→57.49%. Get a credible reason.
+- **Idle cash + falling dividend payout = capital-allocation question.** *Hindustan Media:* ₹587cr cash pile yet DPR fell 11%→5% — where is the cash going?
+- **ROE alone is NOT meaningful — decompose it.** ROE = profitability × asset-turnover × leverage. A high ROE built on *leverage* is bad. Require the good kind: **high NPM + high asset turnover + LOW debt.** Don't reward a company for a high ROE that comes from borrowing.
+
+**Verdict:** management is a **hard veto.** If integrity is in any doubt (fraud history, self-dealing RPT, warrant abuse, debt-funded dividends to self, fake-independent boards) → **REJECT**, even with flawless financials/valuation. "Investment in a great business is futile if management isn't shareholder-friendly." Never trust awards/ratings as proof of integrity.
+Note the nuance from the cases: management red flags are often a matter of *degree* — National Fittings/Kaveri/Ratnamani have strong businesses with *some* governance blemishes (not outright fraud), so the verdict is "get comfortable with management first," whereas Rexnord-style warrant abuse + backdoor control is a clean reject. Weight integrity breaches (self-dealing, fabrication) as vetoes; weight blemishes (one high salary, minor RPT) as cautions to price in.
 
 ---
 
@@ -524,3 +560,148 @@ Target P/E         = (1 / 10-yr G-Sec yield)
 (3) FCF% & SSGR-vs-growth, (4) P/E vs target, (5) promoter salary%/RPT/pledge/SEBI-search.
 If any of {cCFO<<cPAT, NPM<8%, debt spiraling, FCF negative, SSGR<<growth, P/E>>target, management integrity flag} → **REJECT**.
 Only a stock clean on *all* of them earns a deeper read and a BUY.
+
+---
+
+## 17. CASE-STUDY EXAMPLE LIBRARY (my pattern-match reference — read this when analyzing any company)
+
+> **How I use this:** when handed a company, I (a) run §1–§16, then (b) find the closest case below and copy its reasoning and verdict logic.
+> These are 20 *real* worked analyses (Vijay Malik's Case Studies ebook). Each card gives the numbers, the verdict, and the transferable lesson.
+> All "value created per ₹1 retained" = ΔMCap(10y)/retained-profits(10y) (Buffett $1 test; want ≥1, the higher the better).
+> Verdicts were one-off snapshots at their dates — treat them as *reasoning templates*, not live calls.
+
+### 17a. The recurring archetypes (match your company to one of these first)
+
+| Archetype | Signature | Verdict default | Cases |
+|-----------|-----------|-----------------|-------|
+| **Clean compounder, cheap** | sales>15%, NPM>8%, cPAT≈cCFO, +FCF, SSGR>growth, debt-free, good mgmt, **P/E<~11** | **BUY** (rare) | (the goal; National Fittings *almost*, ex-management) |
+| **Great business, too expensive** | all-green fundamentals but **P/E 25–80** | **PASS on price** (watch for a dip) | Amara Raja (40), Supreme (29), Symphony (63), Page (78) |
+| **Strong biz, governance blemish** | great numbers + *some* RPT/board/salary issues | **Conditional — get comfortable with mgmt first** | National Fittings, Kaveri, Ratnamani |
+| **Self-dealing management** | warrant abuse, backdoor control, related-party to family, governance non-compliance | **REJECT (veto)** | Rexnord, Virat Crane |
+| **Growth beyond means (SSGR<<growth)** | high sales growth, debt spiraling, profits stuck | **REJECT** | KRBL, Sarla, Ujaas, Meghmani, Fiem |
+| **Capital-intensive low-margin trap** | low NPM + low fixed-asset-turnover → debt | **REJECT** | Meghmani, Fiem, Sarla |
+| **Value trap** | low P/E + high DY but MCap eroding / regulatory threat | **AVOID** | Noida Toll Bridge |
+| **Structural model loser** | FX-wrong-way / parent-milked / no expansion | **AVOID / no catalyst** | Merck, Zenith (no growth), Hindustan Media (watch cash) |
+| **Quality masked by accounting** | NPM inflated by forex/low-tax/non-op; high-cash+high-debt | **Forensic diligence before trusting** | Torrent Pharma |
+
+### 17b. The 20 verdict cards
+
+**1. National Fittings — *strong biz + board/RPT blemish* (P/E 9.9, ~MoS).**
+Sales 25% CAGR; OPM 6%→20%, NPM loss→14%; tax 33–34%; NFAT 1.43→8.83; ITR 1→9; receivables 81→16d (90% exports on LC); cPAT ₹18cr≈cCFO ₹17cr; SSGR 25–30%; FCF ₹12cr/CFO ₹17cr; debt-free; div rising from FCF; value ₹4.36/₹1; salary reasonable (~₹2L/mo on ₹7.4cr PAT).
+⚠ "Independent" director sits on all promoter private cos (Zauba); 3/4 directors promoter-aligned; RPT purchases from holding co Interfit (~₹2cr leakage); ₹2.7cr interest-free advances to related parties.
+**Verdict:** financially a near-ideal cheap compounder; **conditional on getting comfortable with management.** *Lesson: a clean P&L doesn't clear the management gate — verify board independence via MCA/Zauba.*
+
+**2. Torrent Pharma — *quality masked by accounting* (P/E 14, no MoS).**
+Sales 20% CAGR; OPM 14–16%, NPM ~10% but volatile; tax 20–25% (SEZ/Sikkim/HP incentives); cPAT ₹3,096cr≈cCFO ₹3,325cr; FCF ₹1,017cr (9y); SSGR 25–30%.
+⚠ ₹253cr forex gain = 27% of PBT (true NPM ~11.8% vs reported 16%); ITR 6→4, receivables 53→106d; ₹222cr standalone receivables >6mo from own US/Brazil/Romania subs not remitting; **high cash + high debt** (~₹900cr each, ~₹100cr/yr wasted interest); serial debt-funded acquisitions (Elder, Zyg) → debt ₹2,740cr; dividends paid *while* borrowing.
+**Verdict:** good growth/FCF but **needs forensic diligence; avoid until cash/receivables/acquisition concerns resolve.** *Lesson: strip non-op income; high-cash-with-high-debt is a fraud-adjacent tell; chase the receivables to subsidiaries.*
+
+**3. Rexnord Electronics — *self-dealing management* (P/E 20, no MoS). REJECT.**
+Sales 20–30%; OPM cyclical 6–14%, NPM low 1.4–4.8% (weak pricing power); tax >30%; cPAT ₹9cr<cCFO ₹20cr (working-capital release); SSGR only 5–6% **<< growth 20–30%** (funded by WC release + debt ₹3→8cr + warrant equity); FCF only ₹1cr.
+⚠ Warrants to promoters @₹13.40 vs market ₹23.34 (43% disc, ₹3.36cr gift); promoters took majority 46.47%→51.46% via warrant conversion (backdoor); sales-commission contract to son-in-law's firm Excelum (≤₹2cr/yr); N&R committee non-compliant (§178, auditor-flagged, ignored); company secretary resigned.
+**Verdict:** **REJECT** — SSGR<<growth + serial governance abuse. *Lesson: warrant-at-discount + backdoor control + family RPT = veto.*
+
+**4. Virat Crane — *self-dealing + negative FCF* (P/E 20.4). AVOID.**
+Sales 18–20%; OPM cyclical 3–14%, NPM 1–9% (FY15 spike suspect); cPAT ₹17cr **>> cCFO ₹5cr** (stuck in inventory); SSGR 6–7% << growth; **FCF −₹5cr** (CFO ₹5cr < capex ₹10cr) → funded by equity dilution.
+⚠ No company secretary (§203 non-compliance); corporate guarantees to non-subsidiary group cos (₹10cr+₹13.24cr); ₹8.4cr interest-free loans to group cos; deals with MD's personal firm (Crane Betel Nut); spelling mistakes in AR.
+**Verdict:** **AVOID** — negative FCF + equity dilution + multiple RPT/governance flags. *Lesson: contingent guarantees for group cos and sloppy ARs are real signals.*
+
+**5. Kaveri Seed — *strong biz + disclosure/stake blemishes* (P/E 14.2).**
+Sales 40–45% CAGR; OPM 20–27%, NPM 16–26% (seed entry-barrier moat, farmers pay premium); debt-free; SSGR 50–70% >> growth; FCF ₹347cr/CFO ₹635cr; value ₹3.8/₹1.
+⚠ Tax only 3–5% (incentive — model NPM at 30%); ITR 9.4→2.3 (working-capital heavy); cPAT ₹823cr>cCFO ₹635cr; **68% of receivables >6 months, writing off ₹4–4.5cr/yr**; promoter stake 63.64%→57.49%; RPT (land lease from promoters, sales to 70%-owned Aditya Agritech); unspent CSR; auditor omitted disputed tax; Monsanto royalty lawsuit + Maharashtra MRP cut.
+**Verdict:** strong business; **watch tax-incentive dependence, receivables quality, stake cut, disclosure standards.** *Lesson: read receivables ageing; very-low-tax NPM is fragile.*
+
+**6. Ratnamani Metals — *strong biz + one high-salary flag* (P/E 16.5).**
+Sales 10–20%; OPM 18–20%, NPM 9–11% sustained; tax 32–35%; NFAT→3.87; debt cut ₹106cr→₹30cr (D/E 0.03); SSGR 18–20%; FCF ₹273cr/CFO ₹910cr; value ₹3.10/₹1; CRISIL: 35%+ market share in SS tubes, backward-integrated (moat).
+⚠ cPAT ₹986cr>cCFO ₹910cr (working-capital intensive, per CRISIL); promoter salary ₹26.94cr ≈ ceiling ₹28.44cr on PAT ₹172cr (~15.7%).
+**Verdict:** good business; **only weak spot is high promoter salary**; no price MoS at 16.5. *Lesson: credit reports reveal market share/capacity; salary near ceiling is a flag even in quality names.*
+
+**7. Emami — *great FMCG business* (strong moat).**
+Sales 20–25% CAGR; OPM 24–25% sustained; cPAT ₹2,158cr≈cCFO ₹2,304cr; NFAT 1.74→5.22; ITR 8.7→16.6; receivables 29→15d; ad-spend 15–17% of sales (brand moat); brand shares Navratna 49%→65%, Boroplus 74%→76%; **value ₹15.79/₹1** (exceptional).
+⚠ NPM 12%→22% boosted by low tax (12–18%) + non-op income + falling interest — true operating quality a bit lower; flag incentive expiry.
+**Verdict:** excellent business; buyable only if valuation gives MoS (usually rich). *Lesson: heavy sustained ad-spend + high market share = FMCG moat; adjust NPM for tax/non-op.*
+
+**8. KRBL — *growth-beyond-means, negative FCF* (P/E 16). AVOID.**
+Sales 15–20%; OPM 14–15% stable (India Gate brand premium); tax 17–33% (NPM 4–10% varies); NFAT flat; **ITR 1.3–2.0 (very low — buys whole-year paddy Oct–Dec, ages rice 12–18 months)**; cPAT ₹1,226cr **>> cCFO ₹640cr**; capex ₹940cr > CFO ₹640cr → **FCF −₹300cr**; debt ₹452cr→₹1,281cr; **dividends ₹133cr paid from borrowed money.**
+**Verdict:** **AVOID** — structurally working-capital heavy, negative FCF, debt-funded dividends. *Lesson: brand premium doesn't fix a structurally cash-absorbing model.*
+
+**9. Meghmani Organics — *low-margin capital-intensive trap* (P/E 9.9). AVOID.**
+Sales 7–10%; OPM 14–16% stable but **NPM only 2–3% (interest ₹16cr→₹75cr eats it)**; NFAT 7.5→1.8, ITR 7.2→5.5 (deteriorating); debt ₹209cr→₹603cr; **PBT/NFA <9% (below bank FD)**.
+**Verdict:** **AVOID despite low P/E** — value trap. *Lesson: the PBT/NFA-below-FD test; low NPM + low NFAT = debt; cheap ≠ buy.*
+
+**10. Zenith Fibres — *clean but no growth catalyst* (P/E 7.2, cheap-justified).**
+Sales 10–15%; OPM 8–13%/NPM 5–9% cyclical (low pricing power; PP losing to polyester); tax 34–36%; NFAT 4.48→11.77; **no capacity expansion in 10 yrs** (only ₹6cr maintenance capex); FCF ₹19cr; debt-free; SSGR 30–40%; professional mgmt (non-exec promoter; ex-RBI governor on board; staff raises > KMP raises); **value only ₹1.38/₹1**.
+**Verdict:** low P/E is *justified* — clean and debt-free but no growth engine → limited upside. *Lesson: cheapness can be deserved when there's no expansion; value ~₹1.38 signals mediocrity.*
+
+**11. Merck India — *FX-wrong-way + parent-milked* (P/E 29). AVOID.**
+Sales 10–15% but **OPM collapsed 24–26%→7%, NPM 20%→5%** (imports inputs in USD, sells in INR; INR −60%); tax 33–35%; ITR 8.8→5.3 (obsolete-inventory write-offs); cPAT ₹642cr>>cCFO ₹318cr; SSGR 40–50% (high NFAT) but growth only 10–15%; **dividends ₹341cr > FCF ₹167cr** (funded by liquidating FDs; benefits parent Merck Group); value ₹1.97/₹1.
+**Verdict:** **AVOID** — structural FX disadvantage + parent extraction + expensive. *Lesson: check import/export FX direction; MNC subs can be milked via dividends > FCF.*
+
+**12. Noida Toll Bridge — *value trap* (P/E 5.6, DY ~12%). AVOID.**
+Sales 8–10%; OPM 70–73% (toll); NPM 33–66% (tax 1–36%); receivables 4d (cash toll); cPAT ₹363cr<cCFO ₹661cr; FCF ₹419cr; repaid debt + ₹149cr dividends.
+⚠ Competing bridges (Sarai Kale Khan, Kalindi Kunj) + proposed Barapullah Phase III; **MCap fell ₹189cr vs ₹214cr retained — wealth erosion.**
+**Verdict:** **VALUE TRAP** — cheap + high DY but eroding business/no growth visibility; capital loss > dividend. *Lesson: don't buy DY while MCap erodes.*
+
+**13. Amara Raja Batteries — *great business, too expensive* (P/E 40). PASS on price.**
+Sales 25–30% CAGR; OPM 15–18%/NPM 9–10% sustained; tax 32–34%; NFAT 4.61→8.3; ITR 7.0→11.2; receivables 70→44d; cPAT ₹1,841cr≈cCFO ₹1,782cr; SSGR 40–45%; debt-free (D/E 0.04); FCF ₹389cr; **value ₹6.6/₹1**; rising dividends.
+**Verdict:** textbook quality business but **P/E 40 = no MoS → PASS** (wait for a dip). *Lesson: the price gate is independent of quality; a wonderful business is still a "no" when overpriced.*
+
+**14. Symphony — *great business, far too expensive* (P/E 63.5). PASS on price.**
+Sales 30–40% CAGR; OPM 21–30% (high even in down years); SSGR 60–70%; debt-free; FCF ₹218cr; cPAT ₹361cr≈cCFO ₹313cr (gap is one year); **value ₹25.57/₹1** (asset-light air-cooler moat, outsourced manufacturing).
+**Verdict:** exceptional business, **valuation absurd → PASS.** *Lesson: even a 25× value-creator must clear the price gate.*
+
+**15. Hindustan Media Ventures — *good biz, watch capital allocation* (P/E 11.9, limited MoS).**
+Sales 35–40% (post-2009 Hindi biz transfer); OPM 3–5%→18–20%, NPM→17–18%; cPAT ₹470cr≈cCFO ₹505cr; NFAT 2.2→4.69; ITR 19.9→40.2; receivables 47→21d; SSGR 40–45%; ₹587cr cash pile.
+⚠ Raised ₹78cr short-term debt *despite* ₹587cr cash (**treasury arbitrage** — avoid in non-financials); DPR fell 11%→5% while cash ballooned; buying brands from parent HT Media for ₹62cr (was licensed for ₹1 lakh) → RPT cutting non-op income ~₹6cr/yr.
+**Verdict:** good business at a fairish price; **hinges on cash deployment / parent RPT.** *Lesson: idle-cash-plus-fresh-debt and parent brand-buys are capital-allocation flags.*
+
+**16. Ujaas Energy — *regulatory-dependent speculation* (P/E 30.2). AVOID.**
+Sales spiked 7× (₹34cr→₹234cr→₹526cr) then **crashed 80% to ₹111cr** on solar-policy change; OPM 1–38%/NPM 1–11% wild; NFAT 38→1.4→6.1 erratic; **cPAT ₹65cr vs cCFO −₹43cr** (FY12–14); debt ₹2cr→₹120cr; India Ratings negative outlook.
+**Verdict:** **AVOID** — "a proxy for speculation on regulatory actions." *Lesson: >30–35% growth is unstable; policy-dependent + wildly swinging ratios = unestablished model.*
+
+**17. Page Industries — *great brand, too expensive + WC chink* (P/E 78.3). PASS on price.**
+Sales 30–35% CAGR; OPM 20–21%/NPM 11–13% sustained; tax 31–34%; NFAT 5.3→7.9; ITR 4.1→7.4; SSGR 40–50%; **value ₹33.6/₹1** (Jockey/Speedo licence moat).
+⚠ cPAT ₹734cr>cCFO ₹547cr (receivables 18→21d, debt ₹13cr→₹134cr).
+**Verdict:** elite business but **P/E 78 = no MoS → PASS**; minor receivables chink to watch. *Lesson: brand quality never overrides the price gate.*
+
+**18. Sarla Performance Fibers — *deteriorating capital-intensive* (P/E 13.4). AVOID.**
+Sales ~15%; OPM 14–20%/NPM 8–12% fluctuating (low pricing power); **NFAT 4.7→1.8, ITR 5.2→4.0 (deteriorating)**; cPAT ₹146cr>cCFO ₹114cr; receivables ~90d; debt ₹43cr→₹203cr; SSGR 14–15%.
+**Verdict:** **AVOID** — declining efficiency + rising debt + low bargaining power. *Lesson: deteriorating NFAT/ITR in a capital-intensive co = future debt.*
+
+**19. Supreme Industries — *good biz, slightly expensive, watch the slope* (P/E 29). PASS/watch.**
+Sales 16–19%; OPM 15–16%/NPM 7–9% stable; tax 33–34%; NFAT stable 3.7–4.0 (*declining recently*); ITR 7.7–9.0 (*declining recently*); receivables 20d; cPAT ₹1,410cr<cCFO ₹1,886cr; **SSGR 11–13% < growth 16–19%** (gap funded by modest debt ₹237→385cr); value ₹8.5/₹1; DPR 30–35%.
+**Verdict:** good business, no MoS at 29; **watch falling NFAT/NPM (would drop SSGR and force debt).** *Key Q&A lessons embedded here: verify macro excuses vs peers; brand = consistently higher margins than peers; author's own rule = G-Sec/FD ~9–10% → max P/E ~10–11; ROE only good if from margins+turnover not leverage; invert via the checklist.*
+
+**20. Fiem Industries — *low-margin low-turnover auto-ancillary* (P/E 16.35). CAUTION/AVOID.**
+Sales 20–25%; OPM 9–13%/NPM 2–8% fluctuating (OEM pricing pressure); tax ~30%; **FAT low 2.1–2.4 + low NPM = capital-intensive**; PAT ₹146cr vs investing need ₹349cr → gap met by inventory release (ITR 12→15.8) + debt (₹23cr→₹139cr, recently reduced via efficiency).
+**Verdict:** **CAUTION/AVOID** — once efficiency maxes, debt likely rises again. *Lesson: low NPM + low FAT is structurally capital-hungry; auto-ancillary/OEM suppliers face permanent margin pressure.*
+
+### 17c. New decision rules distilled from the cases (add to the checklist mentally)
+
+1. **Cheap ≠ buy.** Always separate "low P/E because undiscovered good business" (buy) from "low P/E because structurally weak/declining" (value trap). Use value-creation (≥₹1/₹1) + PBT/NFA-vs-FD + MCap trend to tell them apart.
+2. **Great ≠ buy.** A wonderful business at P/E 29–78 is a **PASS on price**, not a buy. Keep it on a watchlist for a dip. (Amara Raja, Supreme, Symphony, Page.)
+3. **Management blemish ≠ automatic veto, but integrity breach IS.** Grade it: self-dealing/fabrication/warrant-abuse/backdoor-control = veto (Rexnord, Virat Crane); one high salary or minor RPT in an otherwise strong, honest company = caution to price in (Ratnamani, National Fittings, Kaveri).
+4. **Adjust reported NPM** for: non-operating income (forex/interest), tax incentives (recompute at ~30%), and one-offs — before believing the quality.
+5. **Two cash tells:** cPAT>>cCFO (profits stuck — check ITR/receivables ageing) and **high-cash+high-debt** (treasury game or fake cash).
+6. **Two structural-debt tells:** SSGR << sales growth, and low-NPM+low-fixed-asset-turnover. Both → the company *must* keep borrowing → eventual stress.
+7. **Verify the story:** macro excuses → compare peers; "brand" → demand higher consistent margins than peers; "independent" directors → MCA/Zauba cross-check; credit-rating report → mine for market share/capacity/working-capital sensitivity.
+8. **FX direction & regulatory dependence** can make an otherwise-fine business structurally un-investable (Merck, Ujaas, Noida Toll).
+
+### 17d. The one-screen analysis dashboard (reconstruct this for every company — the author's template)
+
+Pull 10 years from screener.in into this layout; it ties every gate together at a glance:
+
+```
+Row inputs (10 cols = 10 years) + a "10-yr total/CAGR" column:
+  Sales | Operating Profit | OPM% | Other Income | PBT | Tax% | PAT | NPM%
+  CFO | Capex[(NFA+CWIP)Δ+Dep] | → FCF (=ΣCFO−ΣCapex) | FCF% (=FCF/CFO)
+  SSGR%  vs  Past sales growth (3/5/7/10-yr CAGR)
+  NFAT (high=good) | Receivables days (low=good) | Inventory turnover (high=good)
+  NFA | CWIP | Share Capital(↑=dilution) | Dividend(incl DDT) | DPR% | Retained Earnings
+  Total Debt | Total Equity | D/E
+  CFO | CFI | CFF | Net cash | Cash at year-end
+  Σ Retained Earnings(10y) | Σ ΔMCap(10y) | Value created per ₹1 retained (=ΔMCap/RE)
+```
+Read it top-to-bottom against the §11 checklist. Reference value-creation numbers seen in the cases:
+Symphony 25.6 · Page 33.6 · Emami 15.8 · Amara Raja 6.6 · National Fittings 4.4 · Kaveri 3.8 · Ratnamani 3.1 · Merck 2.0 · Zenith 1.4 · Noida Toll **negative**.
+(≥~3 is good; ~1 is mediocre; <1 or negative = value destroyer → reject.)
