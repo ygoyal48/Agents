@@ -14,10 +14,11 @@
 > data source = screener.in. Currency ₹. "cr" = crore = 10 million. "lakh" = 0.1 million. Numbers in examples are circa 2014–2020.
 > Interest-rate / G-Sec numbers must be refreshed to current values at decision time (see §5).
 >
-> **Built from three sources:** (1) the *Peaceful Investing* method book (framework — §1–§16); (2) the *Case Studies* ebook
-> (20 worked verdicts — **§17**); and (3) the *Company Analyses Vol. 1* ebook (11 forensic deep-dives — **§18**, with a full
-> forensic red-flag catalog). §17–§18 are my fast pattern-match reference: when analyzing any company, find the closest case and
-> copy its reasoning. Refinements discovered in the case books are folded into §1–§16 and tagged **[CS]** (Case Studies) or **[V1]** (Vol 1).
+> **Built from four sources:** (1) the *Peaceful Investing* method book (framework — §1–§16); (2) the *Case Studies* ebook
+> (20 worked verdicts — **§17**); (3) the *Company Analyses Vol. 1* ebook (11 forensic deep-dives — **§18**, forensic red-flag catalog);
+> and (4) the *Company Analyses Vol. 2* ebook (13 more deep-dives — **§19**, with a valuation/accounting-manipulation catalog).
+> §17–§19 are my fast pattern-match reference: when analyzing any company, find the closest case and copy its reasoning.
+> Refinements discovered in the case books are folded into §1–§16 and tagged **[CS]** (Case Studies), **[V1]** (Vol 1), or **[V2]** (Vol 2).
 >
 > **Always, before computing anything:** (a) use **CONSOLIDATED** financials, not standalone — standalone hides subsidiary debt
 > (MRF standalone missed ₹400cr of subsidiary debt, distorting D/E and interest coverage). (b) **Normalize fiscal-year changes** —
@@ -122,6 +123,15 @@ Market Capitalization    > 25 cr
 - **Cross-check the cash-flow statement against balance-sheet changes.** If CFO ignores working-capital movements, or CFF omits a debt inflow that the indebtedness table shows (Ishan Dyes), the accounts are unreliable → raise the bar.
 - **Watch interim (half-year) balance sheets** for sudden jumps in receivables/debt that the annual narrative hides (Machino: receivables ₹11cr→₹32cr in H1 forced ₹21cr capex onto debt ₹34cr→₹66cr).
 
+**[V2] More accounting-manipulation tells (from the second deep-dive ebook):**
+- **Asset revaluation to manufacture profit + flatter D/E (the "win-win" trick).** A company revalues fixed assets *upward* (even plant/machinery/DG sets that should depreciate) → creates a **revaluation reserve**. Two benefits: (a) equity rises → **D/E falls** without repaying debt; (b) each year it **offsets depreciation against the revaluation reserve**, cutting the depreciation expense → **PBT rises**. *Indo Count* created a ₹178.7cr revaluation reserve (FY2010), boosting PBT ~₹84cr over FY2010–16 with ~₹94cr still to come. → Check for revaluation reserves being drawn down against depreciation; strip that boost out of profit.
+- **Capitalizing operating expenses = inflated profit.** Watch for opex parked on the balance sheet: "brand development", "trade fair", "knowledge development" expenses (Emmbi). These should hit the P&L; capitalizing them overstates profit and assets.
+- **"Other income" masking a loss-making core.** If reported profit ≈ other income (interest on bonds, rent, asset-sale gains, forex), the operating business may actually be *losing* money. *IST*: auto-ancillary "profit" ₹6.6cr was entirely other income ₹10.4cr; core operated at a loss. Always compute operating profit *excluding* other income.
+- **One-off gains inflating NPM** (TVS: ₹18cr profit on an intra-group subsidiary sale). Strip non-recurring/related-party gains; verify intra-group sales are at true market value.
+- **Purchase of finished/traded goods with no trading segment disclosed** (Jenburkt bought ₹22cr finished goods ≈ 23% of sales, no trading income shown) → margin handed to a (possibly undisclosed related) third party = profit diversion.
+- **Reconcile cPAT vs cCFO with the full bridge, using ABSOLUTE working-capital levels (not just ratios).** Expected cCFO ≈ cPAT + Depreciation + Interest − ΔReceivables − ΔInventory (+ Δpayables) − capital-gains-in-PAT. Turnover *ratios* can look fine while *absolute* inventory+receivables still drain cash as the company grows (Chaman Lal Setia: cPAT ₹83cr vs cCFO ₹20cr; WC consumed ₹76cr).
+- **Annual-report data that doesn't reconcile / contradicts itself** (Jenburkt short-term-provisions don't total; Chaman Lal Setia says "no change in promoter stake" in one place, "−0.2%" in another; IST cash-flow sign typo) = weak controls → lower trust.
+
 **GOOD looks like — Vinati Organics (VOL), the archetypal pass:**
 - Sales ₹49cr (2005) → ₹696cr (2014) = **34% CAGR** ✓ (and quantity-driven, see §6)
 - OPM rose 15%→24% then stable ~22%; NPM 7%→17% then stable ~12% ✓ (>8%)
@@ -217,6 +227,11 @@ Where (use **3-year averages** of each input to smooth one-year noise):
 
 **My action:** compute SSGR (3-yr avg inputs). If SSGR > 10-yr sales CAGR → tick the "moat/margin-of-safety" box and allow a P/E premium (§5). If SSGR << growth AND debt rising → **reject.**
 
+**[V2] SSGR can be DANGEROUSLY misleading — always override it with FCF + cPAT/cCFO.** SSGR ignores working capital. Two failure modes seen repeatedly:
+- **High SSGR but the company still piles on debt**, because working capital eats the profits. *Chaman Lal Setia:* SSGR 30–60% (looks great) but cPAT ₹83cr >> cCFO ₹20cr; FCF negative; debt ₹23cr→₹50cr. A rice/textile/commodity business with a high computed SSGR can still be a cash drain. **Never conclude "self-funding" from SSGR alone — confirm with positive FCF and cPAT≈cCFO.**
+- **Low SSGR but the company stays low-debt**, because it *improved* working capital (cCFO > cPAT) or has negative working capital. *TVS Srichakra:* single-digit SSGR vs 20% growth, yet debt barely moved (₹121→136cr) because WC improvement threw off cash (cCFO ₹998cr vs cPAT ₹502cr). (Also Caplin §18, Fiem §15.)
+So: SSGR is a *starting* signal; **FCF over 10 yrs is the composite truth.** When SSGR and the debt trend disagree, trust FCF/cPAT-vs-cCFO.
+
 ---
 
 ## 5. VALUATION ANALYSIS + INVESTABLE P/E (Stage 4 — price GATE)
@@ -242,6 +257,9 @@ Where (use **3-year averages** of each input to smooth one-year noise):
 - **Why low P/E wins (quantified):** Mayur Uniquoters bought at P/E 6.6 → IRR 136%, of which earnings growth = 32% and **P/E expansion = 104%** (≈75% of return). Vinati at P/E 7.7 → IRR 143%, earnings 27% + **P/E expansion 116%** (≈81%). The re-rating from cheap→fair (driven by analyst coverage, credit upgrades, institutional buying) is the bulk of the return. Buy *before* discovery.
 - **Industry P/E is IRRELEVANT** as a valuation anchor. Spread *within* an industry is enormous — e.g. Cement-Major "industry P/E 38.76" spans Prism 396 down to Saurashtra 5.7; Private Banks "18.36" spans Kotak 63 down to Karnataka 4.1; Cigarettes "26.42" spans Godfrey 34 down to Raghunath 3.8. Good companies trade richer than poor ones in the *same* industry. Do **not** assume a stock "deserves" the industry P/E (mean reversion often fails). Judge each company on its own P/E vs its own fundamentals.
 - **[CS] Beware the VALUE TRAP — a low P/E is not automatically a buy.** Cheap P/E + high dividend yield can hide a business whose value is *eroding*. Cross-check: is market cap *growing* over 10 yrs (value-creation ≥ ₹1 per ₹1 retained), or shrinking? *Noida Toll Bridge:* P/E 5.6, DY ~12% — looks great, but MCap *fell* ₹189cr over 10 yrs (vs ₹214cr retained) and faces competing-bridge threats → value trap, the capital loss swamps the dividend. *Meghmani:* P/E 9.9 but PBT/NFA below FD rate → cheap for a reason. Low P/E only wins on a *fundamentally sound* company temporarily undiscovered — not on a structurally weak/declining one. Don't be lured by dividend yield alone while capital erodes.
+- **[V2] Net-asset / sum-of-the-parts (SOTP) bargains are value traps if management siphons.** For a holding/multi-segment company, value each segment separately (assign *nil* to loss-making/opaque ones), value real estate via a rental-yield cap rate (annual rent ÷ ~9%), sum to a net-asset value. *IST:* net assets ~₹983cr vs a much lower market cap (P/E 6.69) — "cheap." **But** the cash is trapped: management lends to opaque related parties, borrows from an NBFC at 9.5% while lending to related parties at 7.65%, and pays no dividend despite being cash-rich. **Asset-cheapness only pays off if management lets value flow to minorities** — otherwise it's a trap (same veto as §7).
+- **[V2] Judge an IPO/issue price against fundamentals; a rich IPO from a cash-negative company collapses.** *Emmbi* IPO'd at P/E 27.7 while FCF-negative → crashed 36% on listing day, took 5.5 yrs to regain the issue price. And **high issue cost signals desperation** (Emmbi paid 9% of proceeds; a normal small IPO runs ~6.9% per PwC; Omkar 14%, Wonderla 6.25%).
+- **[V2] Treat a sudden, large credit-rating UPGRADE with a pinch of salt.** *Indo Count* was raised 6 notches (BBB-→AA-) by CARE in a single year — the *same* agency that had rated Amtek Auto AA- shortly before it defaulted. Rating agencies can be slow/wrong; use the *trend* but verify with your own FCF/debt work.
 
 ### 5b. The 4 Principles — compute the *target investable P/E*
 
@@ -302,6 +320,12 @@ High growth alone is NOT enough — it must pass **all 5 moat tests** (else it's
 - **Long-term ABOVE-market contracts get renegotiated/reneged** — never bank on them. *Bhageria* solar PPA at ₹4.41/unit when market fell to ₹2.44 (buyers renege; cf. Petronet–RasGas LNG forced from $12–13 to $6–7 + penalty waiver). Model the renegotiated/lower number.
 - **Capacity-utilization → growth-runway.** If plants run near their ceiling (e.g. denim ~84–85%), further growth needs a fresh debt-funded capex round — no operating leverage left (Nandan). Also: distrust headline "volumetric/installed" capacity; use *rated/effective* capacity (Omkar 5,400 vs 2,315 TPA).
 
+**[V2] More business-quality refinements:**
+- **Loss of a previously-STABLE margin = moat erosion (a sell/avoid signal).** If OPM was stable for years (pricing power) and then starts *fluctuating*, the moat is gone. Track **raw-material cost as % of sales**: roughly constant = pass-through/pricing power; rising-and-fluctuating = pricing power lost. *Vikram Thermo:* stable ~20% OPM (FY07–11) → RM/sales swung 50–65% and OPM turned cyclical → competitive position deteriorated.
+- **Verify management self-praise and segment excuses against PEERS.** *Ruchira Papers* claimed it "maintains margins" and has "best receivables" — the peer chart showed it fluctuates like peers and TNPL is more stable/cost-competitive; JK/West Coast collect better. Conversely, a *genuine* industry-wide problem checks out across peers (*Ultramarine's* weak wind-power division matched *Ambika Cotton's* — a real TN grid/wind issue, not company-specific).
+- **Compare brand strength to the category leader via OPM.** *Chaman Lal Setia* (Maharani rice) runs ~half the OPM of *KRBL* (India Gate) → weaker brand/pricing power. A "brand" that doesn't earn category-leading margins is weak.
+- **Avoid the EPC / infrastructure / construction sector as a rule.** Percentage-of-completion revenue has *no link to cash*; project economics (land, approvals, cost overruns) can't be verified from public data; many subsidiaries enable consolidation games. *MBL Infrastructure:* reported cPAT ₹528cr but cCFO only ₹176cr; capex ₹1,062cr funded by equity dilution + debt (₹77cr→₹1,402cr); liquidity tells (delayed statutory dues, "cheque overdrawn" = bounced cheques, lenders refusing a performance guarantee → NHAI terminated the project); MCap fell ₹463cr→₹222cr (wealth destroyer at P/E 2.5). In this sector ~2/3 of players shut shop — **permanent-capital-loss risk.**
+
 ---
 
 ## 7. MANAGEMENT ANALYSIS (Stage 6 — HARD VETO GATE, the MOST important factor)
@@ -359,6 +383,20 @@ High growth alone is NOT enough — it must pass **all 5 moat tests** (else it's
 - **Statutory non-compliance & AR sloppiness:** missing woman director (BSE fine) / company secretary / valid N&R committee; AR arithmetic that doesn't tally (MRF indebtedness), copy-pasted sections (Ishan), factual howlers ("agriculture is India's largest GDP contributor" — Nandan), in-house Registrar & Transfer Agent instead of an independent one (MRF). Individually minor; collectively a governance-quality signal.
 - **Low *reported* promoter stake can be benign** — large "public" holders are often promoter friends/family who vote with them. Probe surnames/relationships; a "public" holder *gifting* shares to a promoter (reclassified as promoter) confirms the link (Ishan: ~28% with "Patel" families). Low stake isn't automatically a control risk, but a *falling* stake still is.
 - **Positive management signals to credit (Caplin is the model):** founder takes **zero salary**, successor (Harvard MBA) paid a *nominal* ₹1.5L/mo (below market), innovative/risk-taking track record, clear succession. Contrast Ruchira Papers paying 8 relatives (29–69 yrs, 8–23 yrs exp) the *identical* salary — pay unlinked to contribution = flag.
+
+**[V2] More governance red flags & signals (from the second deep-dive ebook):**
+- **The warrant + pledge vicious cycle (deep red flag).** Promoters get warrants at a discount, then **fund the exercise by pledging their existing shares** (confirmed in Granules' own conference call: "all the share pledging was done exclusively to fund warrants"). This chains three abuses: cheap backdoor stake increase (Granules 48.6%→51.15% crossing majority), then **high salary + debt-funded dividends** extracted to service those personal pledge-loans, with the company/minorities bearing all the risk (a pledge call would crater the stock). Treat warrants-funded-by-pledge as near-veto.
+- **Warrant conversion timed to inside knowledge.** *Indo Count* promoters converted warrants 3 months before the (non-public) CDR exit, gaining ~₹350cr at minority cost. Warrants let insiders speculate on their own stock with asymmetric information.
+- **Debt-funded dividends used by the promoter to raise personal stake.** An FCF-negative company that pays dividends is borrowing to do so; if the promoter then uses those dividends (plus a fat salary) to *buy more shares*, they are leveraging the company's balance sheet to increase their own stake at the company's cost (*Emmbi* promoter 47%→57%). Always check: is the dividend covered by FCF? Where do promoter share-purchases' funds come from?
+- **Reverse-RPT: the company enriching promoters via interest.** Loans/deposits *from* promoters at above-market rates (*Chaman Lal Setia* pays promoters 15.6%; *IST* lends to related parties at 7.65% while borrowing at 9.5%; *Nile* 10–12% vs bank 8.85%), especially when the company could borrow cheaper from a bank. = siphoning.
+- **Identical salaries to many promoter relatives, unlinked to role** = disguised allowance/extraction. *Ruchira Papers:* 8 relatives each paid the *exact* ₹36.2L (regardless of age/experience) with *identical* increments; the CSR head (promoter's wife) drew ₹36.2L while total CSR spend was ₹7.47L. Total ≈ 15% of PAT bled out this way.
+- **Read the multi-year appointment resolution for the FULL pay structure.** A current-year salary can look modest while the appointment resolution sets a fat commission on top (*Jenburkt:* 8.7% of PAT salary *excludes* a 3% profit commission).
+- **Disproportionate employee cost vs peers** (Jenburkt 23% of income vs peers 4–9%) — possible disguised extraction/inefficiency; the "good staff → good margins" defence fails if a peer earns the same OPM at a fraction of the cost.
+- **Inter-corporate deposits (ICDs) + bad-debt write-offs** — a classic extraction combo: advance money to a related/opaque party as an ICD, later write it off in "other expenses." Watch both lines together (Ultramarine).
+- **Contingent liability sized vs annual profit and cash.** A pending penalty/litigation bigger than a year's profit can wipe out a year (*Jenburkt* ₹16.45cr regulator penalty > annual profit; cushioned by ₹25cr cash). Always read the contingent-liability note.
+- **A government / institutional nominee director (with a real stake) protects minority cash** from being lent to a stressed promoter group. *Srikalahasthi* (AP govt nominee) was *not* raided to bail out bankrupt group co Electrosteel Steels. General rule: **loan-route extraction to group entities harms minorities (Cairn India–Vedanta); dividend-route is fair (Hindustan Zinc, govt 30%)** because all shareholders share it. Be extra cautious when the parent group is financially stressed.
+- **Auditor rotation is a POSITIVE** (fresh independent perspective) — unless it's *too* frequent (every year), which then becomes suspicious (like rating-shopping).
+- **Positive transparency signals** (credit to management): holding a shareholder **conference call at the AGM** for remote holders and proactively clarifying market rumors (*Emmbi*).
 
 **Verdict:** management is a **hard veto.** If integrity is in any doubt (fraud history, self-dealing RPT, warrant abuse, debt-funded dividends to self, fake-independent boards, parallel competing businesses, data falsification, rating-shopping) → **REJECT**, even with flawless financials/valuation. "Investment in a great business is futile if management isn't shareholder-friendly." Never trust awards/ratings as proof of integrity.
 Note the nuance from the cases: management red flags are often a matter of *degree* — National Fittings/Kaveri/Ratnamani have strong businesses with *some* governance blemishes (not outright fraud), so the verdict is "get comfortable with management first," whereas Rexnord-style warrant abuse + backdoor control is a clean reject. Weight integrity breaches (self-dealing, fabrication) as vetoes; weight blemishes (one high salary, minor RPT) as cautions to price in.
@@ -858,3 +896,109 @@ Sales 7–10%; OPM/NPM wild (losses FY12–14, OEM pricing pressure); **cCFO ₹
 - **Great business at P/E 40–56 is still a PASS** (Caplin 54, Wonderla 56, Machino 43, Amara Raja 40). Price gate is independent of quality.
 - **Management/integrity is the veto** — Omkar and the Divi's overhang show even strong numbers don't survive governance failure.
 - When a company "looks too good" (Divi's margins, Caplin/Omkar growth), the work is to find *why*, and whether it's durable, real, and shareholder-aligned.
+
+---
+
+## 19. COMPANY-ANALYSES VOL 2 — deep-dive library (third pattern-match reference)
+
+> 13 more forensic deep-dives. Strong on **accounting manipulation** (asset revaluation, capitalized opex, "other income" masking),
+> **SSGR-vs-FCF traps**, **warrant/pledge/reverse-RPT extraction**, and **sector avoidance (EPC/infra)**. Same drill: match the company
+> to a card, then run the §18c + §19c catalogs. Verdicts are dated snapshots — use them as reasoning templates for buy/sell calls.
+
+### 19a. Quick archetype map (Vol 2)
+
+| Archetype | Cases | Default verdict |
+|-----------|-------|-----------------|
+| **Growth beyond means + warrant/pledge/salary governance** | Granules (P/E 19) | AVOID |
+| **Commodity, margin tracks input price, cheapish** | Srikalahasthi (6.4), Poddar (10) | monitor; low-P/E not enough |
+| **Turnaround, real — but accounting/warrant flags** | Indo Count (11) | conditional; audit the revaluation/warrants |
+| **Working-capital trap: high SSGR yet negative FCF** | Chaman Lal Setia (8), Emmbi (17) | AVOID (value trap / debt trap) |
+| **Decent, working-capital-driven, fairly clean** | TVS Srichakra (10.4), Ultramarine (16.5) | OK-ish; watch WC & governance |
+| **Commodity paper/chemical + relative-salary extraction** | Ruchira (9.4) | AVOID (governance) |
+| **EPC/infra — permanent-capital-loss sector** | MBL Infrastructure (2.5) | AVOID (sector) |
+| **Good business, governance/salary/RPT flags** | Jenburkt (>20), Vikram Thermo (15) | monitor; not cheap; moat eroding (Vikram) |
+| **Net-asset bargain trapped behind management** | IST (6.69) | AVOID (asset value won't reach minorities) |
+
+### 19b. The 13 deep-dive cards
+
+**1. Granules India — growth beyond means + warrant/pledge governance (P/E 19). AVOID.**
+Sales 20–25% but **SSGR 5–8% << growth → FCF −₹174cr**, debt ₹134→474cr + equity dilution. Commodity mature APIs (Paracetamol/Ibuprofen/Metformin, 86% of sales) → cyclical OPM (recent lift from cheap RM, "passed on with a 2–3 month delay"). Subs not remitting (standalone receivables > consolidated by ₹46cr). **Credit-rating shopping** (CARE→ICRA→India Ratings). **Warrant+pledge cycle:** promoters got warrants at ₹84.91/₹95.30 vs market ₹147.90/₹119.70 (~₹43cr benefit, crossed 50%), funded by pledging shares; plus high salaries (CMD ₹10cr = 8.5% PAT; wife ₹8cr while running a vineyard) and dividends despite negative FCF. *Lesson: the whole extraction playbook in one name.*
+
+**2. Srikalahasthi Pipes — commodity, cheap, stressed group (P/E 6.4). monitor.**
+Sales 10–15%; **OPM 6–23% tracks iron-ore price** (losses FY12–13); NFAT stable ~2.4; cPAT ₹423cr < cCFO ₹880cr (dep ₹208cr + interest ₹400cr add-back → artifact); FCF ₹430cr; value ₹2.58/₹1; rating A→A+. Flags: salary ₹9.8cr (6.2% PAT); intermediary-contractor arrangement for govt receivables (doesn't remove payment-delay risk); wafer-thin coal *trading* (0.9–2.4% margin — check counterparty); RPT with group Electrosteel Castings (5% of sales but 19% of receivables). **Positive:** a govt-nominee director likely stops the stressed Electrosteel group from raiding its cash. *Lesson: low P/E is *deserved* for a commodity in a stressed group; watch RPT/cash use.*
+
+**3. Indo Count — real turnaround, but audit the accounting (P/E 11). conditional.**
+Sales 25–30% but losses to FY2012 (a ₹150cr "zero-cost" forex-derivative blow-up → CDR; exited 4 yrs early); OPM 3%→20%, NPM →12%; **NFAT 0.8→5.0 (highest vs Welspun/Vardhman/Trident — genuinely asset-light via yarn outsourcing)**; cPAT ₹476cr ≈ cCFO ₹463cr; debt ₹434→358cr; rating BBB-→AA- (6 notches/yr — pinch of salt). **Flags: asset-revaluation profit trick** (₹178.7cr reserve boosting PBT ₹84cr, ₹94cr to come); **factory-gate revenue recognition** for an exporter; **warrants** converted just before CDR exit (~₹350cr insider gain); undisclosed ₹65cr "other payables" and ₹51cr "Others" advances; promoter commission 5%. *Lesson: even a real turnaround can carry big accounting/warrant red flags — verify before buying.*
+
+**4. Ruchira Papers — commodity paper + relative-salary extraction (P/E 9.4). AVOID.**
+Sales 19%→7% slowing; OPM fluctuates like peers (its "we maintain margins/best receivables" claim is false vs TNPL/JK/West Coast); tax incentives expire FY2018; cPAT ₹81cr < cCFO ₹251cr (artifact); debt cut ₹141→73cr. **Governance: salary ₹3.13cr = 16% of PAT (exceeds §197, "inadequate profits" admitted); 8 relatives each paid identical ₹36.2L with identical hikes; CSR-head wife ₹36.2L vs ₹7.47L CSR spend; RPT sales ₹95cr = 25% of sales to relatives' firms.** *Lesson: verify self-praise vs peers; identical-relative-salaries = disguised extraction.*
+
+**5. TVS Srichakra — decent, working-capital-driven (P/E 10.4). OK-ish.**
+Sales 20%; OPM 6%→14% (aftermarket mix 25%→30% + formula-based OEM pass-through + process gains — per credit report); NFAT 5–7; receivables 62→31d; **SSGR single-digit << 20% growth yet debt flat (₹121→136cr) because WC improvement threw off cash (cCFO ₹998cr >> cPAT ₹502cr)**; FCF strong; dividends ₹125cr from FCF. Minor flags: NPM lifted by a one-off ₹18cr intra-group subsidiary sale (to TVS Automobile Solutions, in which it also invested ₹40cr) — verify arm's-length. *Lesson: FCF, not SSGR, explains a low-debt fast grower; strip one-off intra-group gains.*
+
+**6. Poddar Pigments — commodity masterbatch, high-NFAT = low barriers (P/E 10). mediocre.**
+Sales 10–15% slowing; low fluctuating OPM 4.5–8.5% (crude-linked, no pricing power); **NFAT very high 5.6→12.7 → grows debt-free BUT signals low entry barriers/commodity competition**; receivables rising (buyers delaying); cPAT ₹104cr > cCFO ₹83cr (WC consumed ₹57cr); SSGR 25–30%, FCF ₹52cr, near debt-free, did a buyback; value ₹2/₹1. Flags: remuneration 10% of PAT (CEO+MD ~5% each); rotates a stock-trading portfolio; rent to CEO's wife + consultancy to MD's daughter; 2 SEBI complaints. *Lesson: the NFAT sweet-spot rule in the flesh — high NFAT ≠ good.*
+
+**7. MBL Infrastructure — EPC sector, permanent-capital-loss risk (P/E 2.5). AVOID.**
+% -of-completion revenue with no cash link; cPAT ₹528cr >> cCFO ₹176cr; capex ₹1,062cr funded by 2 equity dilutions + debt (₹77→1,402cr). Liquidity tells: delayed statutory dues/DDT, **"cheque overdrawn" (bounced cheques)**, lenders demanding more pledge, **lenders refused a performance guarantee → NHAI terminated the project**; subs withholding ₹203cr receivables; auditor "receivables subject to confirmation." MCap ₹463→222cr (wealth destroyer). Industry: bidders/project 20→6–7 (~2/3 shut shop). *Lesson: avoid EPC/infra as a class; P/E 2.5 is a warning, not a bargain.*
+
+**8. Ultramarine & Pigments — decent business, minor governance (P/E 16.5). OK-ish.**
+Sales 10–15%; OPM 15–18%/NPM 9–12% sustained (a real pass-through business); NFAT 4–4.9; cPAT ₹163cr ≈ cCFO ₹176cr; SSGR 15–17%, FCF ₹105cr, debt-free, dividends ₹84cr. Flags: salary 16.7% of PAT (managerial raise 57.8% vs staff 14.3%); **IT/BPO "diworsification"**; inter-corporate deposits + ₹1.5cr bad-debt write-off (extraction watch); Dahej plant delayed. **Positive: auditor rotation** (good); wind-power weakness verified as an industry issue via Ambika Cotton. *Lesson: a genuinely sound FCF business, just price it right and watch the diworsification.*
+
+**9. Emmbi Industries — capital + working-capital heavy → debt-trap risk (P/E 17). AVOID/monitor.**
+Sales 28%→14%; OPM 9–13% (monthly contracts = real pass-through) but **NPM low 2–5%** (interest+depreciation eat it). **~5.25 months of sales locked in WC** (receivables 60–68d + inventory) and must pay supplier (Reliance) 100% advance → cPAT ₹34cr > cCFO ₹22cr, FCF −₹45cr, debt ₹15→62cr + IPO. IPO at P/E 27.7 while cash-negative → crashed 36%, 9% issue cost. Debt-funded dividends the promoter uses to raise stake (47%→57%); capitalizes brand/trade-fair "expenses"; salary 14% of PAT. **Positive: AGM conference call, rumor clarifications.** *Lesson: compute months-of-sales in WC; a low-NPM capital+WC-heavy model is a debt trap.*
+
+**10. Jenburkt Pharmaceuticals — good business, governance/cost flags (P/E >20). monitor.**
+Sales ~10%; OPM 8%→18% (beats peers SMS/Mangalam/Lincoln/Nectar); SSGR 25–35% > growth, FCF+, debt-free, ₹30cr cash → real business MoS. Flags: **employee cost 23% of income vs peers 4–9%** (Nectar same OPM at 4%); salary 8.7% of PAT *excluding* a 3% commission (read the appointment resolution); bought ₹22cr finished goods (23% of sales) with **no trading segment disclosed** (margin to a possibly related third party); rent to promoter entity +27% in a year; contingent penalty ₹16.45cr > annual profit; short-term-provisions data doesn't reconcile. *Lesson: good SSGR/FCF but multiple quiet extraction/accounting-quality flags; not cheap.*
+
+**11. IST — net-asset bargain trapped behind management (P/E 6.69). AVOID.**
+SOTP: auto-ancillary operates at a loss (profit is all "other income"); steel&power ~nil; real estate = 28% revenue share of a completed IT SEZ (85% NPM cash cow) → cap-rate value ~₹827cr; total net assets ~₹983cr > market cap. **But** cash is trapped: opaque related-party investments (Vinayak/IST Softech/Subham), lends to related parties at 7.65% while borrowing at 9.5%, no dividend despite cash-rich, company secretary highest-paid, cash-flow typo in an old AR. *Lesson: asset-cheap ≠ buy when management won't let value reach minorities.*
+
+**12. Vikram Thermo — small pharma-excipient, moat eroding (P/E 15). monitor/avoid.**
+Sales 10–15% → ~2% (a FY2015 de-growth); **OPM was stable ~20% (FY07–11 = pricing power) then turned cyclical (RM/sales 50%→65%) = moat lost**; ITR 13.7→9.6; receivables 83→133d (>180-day overdue ≈ 50% of PAT); SSGR 25–35% > growth, FCF ₹13cr, debt-free, value ₹2.41/₹1. Salary above ceiling but modest absolute (₹20–30L/director). *Lesson: a stable margin turning fluctuating = moat erosion; overdue-receivables vs PAT sizes the risk.*
+
+**13. Chaman Lal Setia — basmati rice, working-capital value trap (P/E 8). AVOID.**
+Sales 23%; OPM stable 7–9% (Maharani brand — but ~half of KRBL's OPM = weaker brand); NFAT high 16→24; **SSGR 30–60% looks great BUT cPAT ₹83cr >> cCFO ₹20cr** (WC consumed ₹76cr) → FCF negative, debt ₹23→50cr. Flags: pays promoters 15.6% interest on their loans (vs cheaper bank debt); salary 12% of PAT; AR contradicts itself on promoter stake. Author explicitly links it to the Noida Toll **value trap**. *Lesson: high SSGR is meaningless when working capital eats the cash — trust FCF; low P/E here is a trap.*
+
+### 19c. Vol 2 additions to the forensic catalog (append to §18c)
+
+**Accounting manipulation**
+36. Upward asset revaluation → revaluation reserve → lower D/E + reserve offset against depreciation → inflated PBT (Indo Count).
+37. Capitalizing operating expenses (brand/trade-fair/knowledge "development") to inflate profit (Emmbi).
+38. Reported profit ≈ "other income" → core operation is loss-making; strip other income (IST).
+39. One-off / intra-group sale gains inflating NPM; verify intra-group prices (TVS).
+40. Purchase of finished/traded goods with no trading segment disclosed → margin diverted to a (related?) third party (Jenburkt).
+41. Factory-gate revenue recognition for exporters → reversal risk (Indo Count).
+42. AR figures that don't reconcile or contradict other sections (Jenburkt, Chaman Lal Setia, IST).
+43. cPAT-vs-cCFO bridge using *absolute* inventory/receivables, not just turnover ratios (Chaman Lal Setia, Poddar).
+
+**Business / valuation**
+44. NFAT sweet-spot: very high = low barriers/commodity; very low = capital-intensive debt trap (Poddar — explicit).
+45. Loss of a previously-stable margin (rising RM/sales %) = moat erosion (Vikram Thermo).
+46. Verify management self-praise and segment excuses against peers (Ruchira false; Ultramarine wind verified).
+47. Brand strength = OPM vs the category leader (Chaman Lal Setia vs KRBL).
+48. Avoid EPC/infra as a class (%-completion revenue, unverifiable, ~2/3 players shut) (MBL).
+49. SSGR overridden by FCF + cPAT/cCFO for working-capital-heavy businesses (Chaman Lal Setia, TVS).
+50. SOTP/net-asset value + real-estate cap-rate (rent ÷ ~9%); but asset-cheapness is a trap if management siphons (IST).
+51. IPO/issue price judged vs fundamentals; rich IPO from a cash-negative firm collapses; issue-cost % signals desperation (Emmbi).
+52. Sudden multi-notch credit-rating *upgrade* → pinch of salt (Indo Count; Amtek Auto precedent).
+53. "Months of sales locked in working capital" = receivables days + inventory days; worse if suppliers demand advance payment (Emmbi).
+
+**Governance / capital allocation**
+54. Warrant + share-pledge cycle funding backdoor stake, then salary/dividend extraction to service the pledge-loans (Granules).
+55. Warrant conversion timed to insider knowledge (Indo Count, pre-CDR-exit).
+56. Debt-funded dividends recycled by the promoter to buy more shares = leveraging the company for personal stake (Emmbi).
+57. Reverse-RPT: company pays promoters/related parties above-market interest, or lends to them below its own borrowing cost (Chaman Lal Setia, IST, Nile).
+58. Identical salaries to many relatives regardless of role/experience = disguised allowance (Ruchira).
+59. Read the multi-year appointment resolution for the full commission structure (Jenburkt).
+60. Disproportionate employee cost vs peers (Jenburkt 23% vs 4–9%).
+61. Inter-corporate deposits + later bad-debt write-off = extraction combo (Ultramarine).
+62. Contingent liability sized against annual profit and cash (Jenburkt).
+63. Govt/institutional nominee director (with a stake) protects minority cash from a stressed promoter group; loan-route extraction harms minorities, dividend-route is fair (Srikalahasthi; Cairn vs HZL).
+64. Auditor rotation = positive (unless too frequent). Stressed promoter group = raid risk. Positive: AGM conference call / rumor clarifications (Emmbi).
+
+### 19d. Buy/sell decision reinforcement (all four sources)
+- **BUY** only the rare all-green: sales >15% with *stable/rising* margins (pricing power, not input-cost luck), cPAT≈cCFO, **positive 10-yr FCF**, SSGR≥growth *confirmed by FCF*, moderate NFAT, debt-free, honest minority-friendly management, at **P/E ≤ target (§5)**. Verify every "too good" number's *cause*.
+- **REJECT / SELL** on any of: negative FCF over 10 yrs; SSGR<<growth with rising debt; margin that tracks input prices (commodity) or a *previously-stable* margin turning cyclical (moat lost); cPAT>>cCFO with rising receivables/inventory; capital-intensive + low-NPM (debt trap); EPC/infra sector; **any integrity veto** (warrant/pledge extraction, reverse-RPT, self-dealing, revaluation/other-income profit inflation, credit-rating shopping, data falsification, parallel competing promoter business). 
+- **PASS on price** a great business above target P/E — keep it on a watchlist.
+- **Low P/E is never sufficient**: most cheap names here (MBL 2.5, Chaman 8, Srikalahasthi 6.4, IST 6.69, Ruchira 9.4) are value traps or governance rejects. A cheap price only counts on a *fundamentally sound, honestly-run* business.
