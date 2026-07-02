@@ -43,6 +43,9 @@ A stock is a **BUY** only if it passes **ALL** of: Financial gate, Fraud gate, B
 Failing **any single gate = REJECT** (management and fraud gates are hard vetoes — no amount of cheapness compensates).
 
 ```
+STEP 0  ARCHETYPE TRIAGE (pattern match FIRST) → §17a + the archetype maps atop §18–§25
+        match the company to its nearest archetype/case, read that card, carry its
+        default verdict + known failure modes into every step below
 STEP 1  SCREEN (shortlist)            → §1
 STEP 2  FINANCIAL ANALYSIS (8 params) → §2   gate: must pass ≥ all core thresholds
 STEP 3  FRAUD / SHENANIGAN SCAN       → §3   gate: any hard red flag = REJECT
@@ -59,6 +62,8 @@ STEP 11 FINAL CHECKLIST               → §11  the consolidated pass/fail table
 → SELL RULES                          → §14
 WORKED-EXAMPLE LIBRARY (pattern match)→ §15
 FORMULA APPENDIX                      → §16
+PATTERN-MATCH LIBRARIES (100 cases)   → §17–§25  (find the closest case, copy its reasoning)
+FORENSIC RED-FLAG CATALOG (194 items) → §18c → §19c → §20c → §21c → §22c → §23b → §24b → §25b
 ```
 
 **Master mental model of an ideal buy (memorize this archetype):**
@@ -70,6 +75,43 @@ FORMULA APPENDIX                      → §16
 
 **Hit-rate expectation:** rejection rate is *supposed* to be very high. Finding ~1 good stock/year is plenty.
 "10 good stocks in a lifetime can make one a billionaire." Never relax criteria to force a buy. When in doubt → REJECT.
+
+### 0a. The TEN cross-volume KILL-TESTS (compute ALL of these in every analysis — each one, alone, has rejected companies)
+
+> These are the quantified tests the ten sources added *on top of* the base gates. They are folded in detail into §2–§7,
+> but I list them here so none is ever skipped. Each has a § pointer to its full worked treatment.
+
+1. **Value created per ₹1 retained** = ΔMcap(10y) ÷ cumulative retained earnings(10y). **≥1 required; <1 = capital incinerator, no P/E is low enough** (Rain 0.31, Datamatics 0.48, Just Dial **−7.64**). Discard the metric on a tiny-RE denominator (India Glycols) or a distressed near-zero starting Mcap (Marksans 23.35 artifact). → §2[V6], §5[V6], §5[V8]
+2. **FCFE = FCF − interest > 0.** If negative, dividends/buybacks/growth are debt-funded no matter how strong CFO looks (Rain −₹3,710cr). → §2[V7]
+3. **SSGR vs achieved growth**, plus the structural version: **low NFAT (~≤1.5) × low NPM (~≤4%) = a debt trap that can never self-fund** — do the incremental-growth math before believing any growth story. → §4, §2[V7]
+4. **Decompose every cCFO-vs-cPAT gap** before crediting or damning it. Benign: other income (§2[V4]); interest+depreciation add-back in a levered firm (§2[V7]); a *deliberate* WC-intensive moat (AIA §2[V8]). Malignant: rising receivable-days/inventory with no operating reason (§3). The headline ratio lies until decomposed.
+5. **Margin-source triage on every OPM change:** real pricing power vs cost-efficiency vs external luck. **Pricing power is proven ONLY by RM-cost-%-of-sales FALLING while OPM rises** (Atul 59→48%); lagged pass-through, cartel/duty props, competitor outages (IOL/BASF), and currency (IT services) are NOT pricing power. → §2[V3], §2[V8], §6
+6. **Cyclical? Value ONLY on mid-cycle/normalized earnings** — trailing P/E looks cheapest at the earnings peak (HEG 2.78, Rain 5.79). Never extrapolate an up-cycle. → §2[V5], §5[V7]
+7. **Both P/E tails are traps.** Low P/E: would it pass every gate at a *normal* P/E? If not, the cheapness is the market's correct verdict (§5[V5]–[V7]). High P/E (≳40): model the de-rating scenario explicitly — Just Dial P/E 65→7 *while PAT doubled* (§5[V8]). Quality without margin of safety is still an AVOID (Honeywell 48, Supreme 42.5, Atul 32, AIA 31).
+8. **PBT ÷ avg NFA vs the FD rate** — a business earning less on its assets than a fixed deposit has no reason to exist; also benchmark PBT/NFA against peers. → §2[V4]
+9. **Governance-density counter:** sweep §7b + the 194-item forensic catalog; **≥3 independent governance tricks = REJECT regardless of price** (Marksans). One flag may have an excuse; a *density* of flags is itself the signal. → §7[V8]
+10. **Consolidated-first, with the two scope checks:** (a) the NBFC/finance-subsidiary exception — analyze the manufacturer standalone + NBFC separately (Ashok Leyland §2[V7]); (b) confirm the consolidation *perimeter* — entities left out at management discretion (Minda ~20% of group turnover) or subsidiaries appearing/disappearing YoY (Marksans GmbH) are red flags. → §0, §2[V7], §7[V8]
+
+### 0b. SECTOR / SITUATION ROUTER (before analyzing, read the matching row's sections)
+
+| If the company is… | Mandatory extra reading (route BEFORE computing) |
+|---|---|
+| **Cyclical / commodity** (cement, metals, graphite, yarn, paper, sugar, bulk chemicals) | mid-cycle valuation §2[V5]; §24 Rain/Heidelberg/Century/Filatex; §22 HEG |
+| **Capital-intensive + low-margin** | NFAT×NPM debt-trap math §2[V7]; kill-test #3 |
+| **IT services / export services** | margin = currency bet, not pricing power §6[V6]; §23 Datamatics/Cyient; §25 Sonata (blended-margin split) |
+| **Pharma with US/UK/regulated-market exposure** | binary FDA/MHRA risk §25 Marksans; §17 Torrent (forensic) |
+| **API / chemical with a sudden margin spike** | windfall triage §2[V8] kill-test #5; §25 IOL; §22 Kanchi Karpooram |
+| **EPC / infra / order-book story** | §6[V4] EPC veto (unbilled receivables, overdue ageing); §23 WPIL; §21 |
+| **PSU** | §6[V4] PSU veto (govt interference in pricing/capital) |
+| **MNC subsidiary** | parent-extraction check §7[V7] (royalty/overhead/ICD); §24 Honeywell; §17 Merck |
+| **Auto ancillary / OEM supplier** | customer-captive price-taker §6[V6]; §25 Minda; §17 Fiem; §23 India Nippon |
+| **Contract manufacturer for brands (ODM/EMS/job-work)** | anti-moat §6[V8]; §25 Amber (NPM 1–3% cap) |
+| **Platform / internet / network-effect story** | platform-disruption check §6[V8]; §25 Just Dial (funnel metrics: CTR, churn, revenue/listing, ad-spend) |
+| **Manufacturer with an NBFC/finance subsidiary** | standalone + NBFC separately §2[V7] |
+| **Recent IPO / listing** | §5[V2] Emmbi (issue-price vs fundamentals, issue cost %); §22 Quick Heal/Navkar |
+| **Turnaround / post-distress / "recovery" story** | creditor-write-back vs operational recovery §25 Marksans; §25 IOL; kill-test #1 artifact caution |
+| **Group/conglomerate listco** | listco-as-ATM §7[V6]; conglomerate shuffle both directions §7[V7]/[V8]; §24 Century |
+| **Promoter-family group with many private entities** | RPT sweep both directions §7[V6]/[V8]; parallel/same-name firms §22 Shri Jagdamba |
 
 ---
 
@@ -630,6 +672,11 @@ Note: compare a company to **its own** history (trend) rather than across indust
 - [ ] 6. Current ratio: **>1.25**
 - [ ] 7. Cash flow: **CFO > 0** (great if CFO covers CFI+CFF)
 - [ ] 8. **cPAT ≈ cCFO** over 10 yrs
+- [ ] 9. **Value created per ₹1 retained ≥ 1** — ΔMcap(10y) ÷ retained earnings(10y); metric valid only on a clean solvent base (§2[V6], §5[V8])
+- [ ] 10. **FCFE = FCF − interest > 0** (else dividends/growth are debt-funded, §2[V7])
+- [ ] 11. **Not a low-NFAT × low-NPM debt trap** (kill-test #3, §2[V7])
+- [ ] 12. **cCFO-vs-cPAT gap decomposed** and the cause identified as benign (other income / int+dep add-back / deliberate WC-moat) — not rising receivable-days (§2[V4]/[V7]/[V8])
+- [ ] 13. **Any claimed pricing power proven by FALLING RM-%-of-sales** while OPM rises (§2[V8]); OPM change triaged: power vs efficiency vs luck (§2[V3])
 
 **VALUATION**
 - [ ] P/E: per the **4 Principles** target (base = 1/G-Sec, + moat/FCF/stable premiums); prefer **<10**
@@ -638,6 +685,10 @@ Note: compare a company to **its own** history (trend) rather than across indust
 - [ ] P/B: **<1** (only weighted for financial sector)
 - [ ] P/S: buy **<1.5**, sell **>3**
 - [ ] Dividend Yield: **>0** (>5% attractive; ignore for fast-growers)
+- [ ] **Cyclical → valued on MID-CYCLE/normalized earnings only**, never trailing peak (§2[V5], §5[V7])
+- [ ] **Low-P/E trap check:** would it pass every gate at a *normal* P/E? If not, the cheapness is the market's correct verdict (§5[V5]–[V7])
+- [ ] **High-P/E (≳40) de-rating scenario modeled** — growth must be durable enough to survive multiple compression (Just Dial 65→7 while PAT doubled, §5[V8])
+- [ ] **One-offs stripped from E before any multiple:** DTL-reversal (§2[V7]), inventory/windfall gains, creditor write-backs (§25 Marksans), capital gains booked as income (§2[V6])
 
 **BUSINESS & INDUSTRY (moat)**
 - [ ] Sales growth **> peers**
@@ -647,11 +698,18 @@ Note: compare a company to **its own** history (trend) rather than across indust
 - [ ] **ΔMCap(10y) > retained profits(10y)** (creates, not destroys, value)
 - [ ] Product: **pure play / related** (no unrelated diversification)
 - [ ] **No govt interference** in pricing/profit
+- [ ] **Not an anti-moat archetype:** contract-manufacturer-for-brands (NPM 1–3% cap), platform-disrupted incumbent, customer-captive supplier, temporary-windfall margin (§6[V6]/[V8], §25)
+- [ ] **Not a sector veto:** EPC / PSU / milked-MNC-subsidiary (§6[V4], §7[V7])
+- [ ] **No fatal concentration:** single supplier for a key input (Supreme–Kaneka §6[V8]), or top customers > ~50% of sales (Sonata top-10 = 70%)
+- [ ] **Moat survives the founder leaving AND the key input/vendor changing** (AIA promoter-tethered moat, §6[V8]); succession real
+- [ ] **Margins don't rest on a duty/subsidy/cartel/regulatory prop** that can be revoked (§6[V3]/[V4], Heidelberg cartel floor §24, Paushak license §24)
 
 **MARGIN OF SAFETY**
 - [ ] Price: **EY > 10-yr G-Sec**
 - [ ] Business: **SSGR > achieved sales growth**
 - [ ] Business: **FCF/CFO >> 0** (positive, high)
+- [ ] **FCFE = FCF − interest > 0** (the levered-firm version of the same cushion, §2[V7])
+- [ ] **No serial equity dilution** — recurring QIPs/preferential issues inside a "growth" story = not self-funding (Amber/IOL/Minda §25)
 
 **MANAGEMENT — subjective**
 - [ ] Background check: **nothing** questioning promoter/director integrity
@@ -666,9 +724,26 @@ Note: compare a company to **its own** history (trend) rather than across indust
 - [ ] **FII shareholding low** (undiscovered = re-rating upside)
 - [ ] **No pledged** promoter shares
 - [ ] No abusive **warrants**, no value-extracting **RPTs**
+- [ ] **No listco-as-group-ATM:** no ICDs/loans to promoter entities, promoter-owned suppliers, sell-through-promoter firms, asymmetric promoter-JV terms (§7[V6])
+- [ ] **No reverse-RPT:** not borrowing FROM promoters while cash-rich; no assets sold back to promoters (Atul §7[V8])
+- [ ] **No conglomerate shuffle in either direction:** no junk/losses pushed IN (Just Dial/IOL §7[V8]), no good assets hived OUT without bidding (Century §7[V7]), no promoter-asset purchase promptly impaired (Minda AutoGas)
+- [ ] **Auditor's report clean:** no qualifications, no un-booked MTM/forex/derivative losses (AIA/Amber/Marksans §7[V8]), no capitalised forex losses (Filatex §7[V7]), no reserve-routing of losses
+- [ ] **Consolidation perimeter complete:** subsidiary list reconciles year-over-year; no entities out of scope at management discretion (Minda), none hidden (Marksans GmbH) (§7[V8])
+- [ ] **Statutory hygiene:** taxes/PF/dues/CSR paid on time (chronic delays = integrity tell, §3[CS], §25)
+- [ ] **Warrant-lapse check:** promoters didn't forfeit warrant money while the company defaulted on lenders (IOL §7[V8])
+- [ ] **Density counter < 3:** total independent governance oddities across all checks — **≥3 = REJECT regardless of everything else** (§7[V8])
 
 **CREDIT RATING**
 - [ ] **≥ BBB-** and **improving** trend
+
+**FRAUD / FORENSIC SWEEP (hard veto)**
+- [ ] §3 toolkit run in full: cCFO-vs-cPAT (decomposed), DSO trend + receivables ageing, ITR, FCF-vs-CFO, serial-acquisition counter-metric, abnormal smoothness, accounting-policy changes
+- [ ] The balance-sheet combos: Rising Sales+Receivables+Debt; High-cash+High-debt; vanity-metric headlines (§3)
+- [ ] **Forensic catalog swept:** §18c→§25b, items **1–194** — any match investigated before proceeding
+
+**PATTERN MATCH (do this FIRST and LAST)**
+- [ ] Company matched to its nearest archetype (§17a + maps atop §18–§25) and nearest of the **100 cases** (§17b–§25a); that card's reasoning read
+- [ ] My verdict is **consistent with the matched case's verdict** — if it differs, I have written down exactly which fact differs and why it flips the outcome
 
 → **All clear → BUY** (size per §12). **Any hard veto (fraud/management/price) → REJECT.**
 
