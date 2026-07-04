@@ -10,6 +10,9 @@
 > **Philosophy deliberately omitted.** Arguments for long-term vs trading, "stocks are businesses," motivational
 > content, why-fundamental-beats-technical, marketing of paid services — all skipped. Only decision-relevant content is here.
 >
+> **Pipeline split (multi-agent):** the SCREENING stage lives in `screening.md` and is executed by a SEPARATE agent that
+> writes shortlists to `To-Analyze/`. This file starts where that one ends (§1 = intake). Do not re-run screening from here.
+>
 > **Context of the source:** Indian equities (BSE/NSE), bottom-up fundamental value investing, retail/long-term horizon,
 > data source = screener.in. Currency ₹. "cr" = crore = 10 million. "lakh" = 0.1 million. Numbers in examples are circa 2014–2020.
 > Interest-rate / G-Sec numbers must be refreshed to current values at decision time (see §5).
@@ -50,7 +53,7 @@ Failing **any single gate = REJECT** (management and fraud gates are hard vetoes
 STEP 0  ARCHETYPE TRIAGE (pattern match FIRST) → §17a + the archetype maps atop §18–§29
         match the company to its nearest archetype/case, read that card, carry its
         default verdict + known failure modes into every step below
-STEP 1  SCREEN (shortlist)            → §1
+STEP 1  INTAKE (shortlist arrives from the SCREENING AGENT — see screening.md) → §1
 STEP 2  FINANCIAL ANALYSIS (8 params) → §2   gate: must pass ≥ all core thresholds
 STEP 3  FRAUD / SHENANIGAN SCAN       → §3   gate: any hard red flag = REJECT
 STEP 4  SSGR (inherent growth)        → §4   informs moat + premium
@@ -155,24 +158,16 @@ EXCEL-TEMPLATE PROTOCOL (build the dashboard for EVERY company; file: DrVijayMal
 
 ---
 
-## 1. SHORTLISTING / SCREENING (Stage 0 — narrow the universe)
+## 1. INTAKE (Stage 0 — candidates arrive; screening itself is NOT done here)
 
-**Goal:** cut thousands of stocks to a handful worth deep analysis. Use a screener (screener.in) with a hard quantitative query.
+> **The screening stage is EXTRACTED to `screening.md` (Part 1 of the pipeline) and is run by a SEPARATE screening agent.**
+> That agent runs the quantitative query on screener.in and saves the shortlist to `To-Analyze/shortlist_YYYY-MM-DD.txt`.
+> I (the analysis agent) do NOT re-run screens, re-derive query criteria, or second-guess the funnel — I consume its output.
 
-**Baseline screen query (the author's default — use as the starting filter):**
-```
-Sales growth 10 Years > 15%   AND
-Price to Earnings        < 10  AND
-Debt to Equity           < 1   AND
-Cash from operations latest year > 0  AND
-Market Capitalization    > 25 cr
-```
-- This is *deliberately strict* (the author's run returned ~56 companies out of ~5,471). Good.
-- A screen is a *funnel, not a buy signal*. Anything passing the screen still must pass §2–§11.
-- Media tips / magazines / TV / "hot products" are valid *idea sources* only — never a buy reason. Always do own analysis.
-- Prefer **micro/small/mid-cap** (room to re-rate into large-cap). Avoid already-famous, fully-discovered names.
-
-**My action:** if given a ticker, pull 10-yr data first (P&L, Balance Sheet, Cash Flow, Quarterly). If asked to *find* candidates, apply the screen above (tightening P/E or D/E if too many results).
+**My intake action:**
+- **If a shortlist exists:** read the newest `To-Analyze/shortlist_*.txt`. Each line = Name | Ticker | Mcap | P/E | D/E | Sales10yCAGR | CFO | Tags. Respect the tags: `SME`/`RECENT-IPO` → route straight to kill-tests #13/#15 before anything else; `WATCH-PRICEY` → analysis is for the watchlist, price gate will likely fail today; `IDEA-ONLY` → zero screen credibility, full pipeline mandatory.
+- **If given a ticker directly (by the user or a queue file):** pull 10-yr CONSOLIDATED data first (P&L, Balance Sheet, Cash Flow, Quarterly — §0 rules) and proceed.
+- Remember the funnel's nature: **passing the screen is not a signal** — everything below (§2–§11) still applies in full. Rejection remains the expected outcome for most names.
 
 **[V12] The 60-SECOND DATASHEET GLANCE (run before anything else — accept-for-deeper-read or reject at sight):**
 Look at exactly five rows of the 10-yr dashboard (§17d layout): (1) loss-years count and cPAT sign; (2) cCFO vs cPAT; (3) ΣCFO vs Σcapex (→FCF sign); (4) 10-yr debt change + equity raises; (5) SSGR vs achieved growth.
