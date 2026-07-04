@@ -69,6 +69,7 @@ FORMULA APPENDIX                      → §16
 PATTERN-MATCH LIBRARIES (140 cases)   → §17–§29  (find the closest case, copy its reasoning)
 FORENSIC RED-FLAG CATALOG (278 items) → §18c → §19c → §20c → §21c → §22c → §23b → §24b → §25b → §26b → §27b → §28b → §29b
 MASTER CASE INDEX (alphabetical)      → §29d   |   MASTER value-per-₹-RE TABLE → §5   |   60-SECOND GLANCE → §1
+EXCEL-TEMPLATE PROTOCOL (build the dashboard for EVERY company; file: DrVijayMalik_Screener_Excel_Template_v3.2.xlsx) → §16b
 ```
 
 **Master mental model of an ideal buy (memorize this archetype):**
@@ -909,6 +910,7 @@ Note: compare a company to **its own** history (trend) rather than across indust
 - [ ] **Related-party list reconciled year-over-year vs the shareholding pattern** — no de-classified promoters (SOM SDPL), no vanished related parties (Valiant/Aarti), no undisclosed spouses (Lincoln)
 - [ ] **Marketing/promotion % of sales and any "advances" benchmarked vs peers** — spend ≫ peers routed to counterparties = extraction suspect (SOM §7[V9])
 - [ ] The balance-sheet combos: Rising Sales+Receivables+Debt; High-cash+High-debt; vanity-metric headlines (§3)
+- [ ] **Template dashboard built (§16b)** — via the repo xlsx (`DrVijayMalik_Screener_Excel_Template_v3.2.xlsx`) or the on-the-fly recipe — verdict strip (FCFE.1/.2, value-per-₹-RE, SSGR, cPAT-vs-cCFO, RM%-trend) read against the kill-tests, fund-flow table added manually
 - [ ] **Forensic catalog swept:** §18c→§29b, items **1–278** — any match investigated before proceeding
 
 **PATTERN MATCH (do this FIRST and LAST)**
@@ -1065,6 +1067,106 @@ Target P/E         = (1 / 10-yr G-Sec yield)
 (3) FCF% & SSGR-vs-growth, (4) P/E vs target, (5) promoter salary%/RPT/pledge/SEBI-search.
 If any of {cCFO<<cPAT, NPM<8%, debt spiraling, FCF negative, SSGR<<growth, P/E>>target, management integrity flag} → **REJECT**.
 Only a stock clean on *all* of them earns a deeper read and a BUY.
+
+### 16b. THE EXCEL-TEMPLATE PROTOCOL (the operational layer — build this dashboard for EVERY company)
+
+> **The template file lives next to this document:** `DrVijayMalik_Screener_Excel_Template_v3.2.xlsx`
+> (sheets: *Instructions*, *Dr Vijay Malik Analysis*, *Version History*, *Data Sheet*). This is the author's own engine —
+> **the §26–§29 volume datasheets ARE this workbook's output** (same rows: OPM/NPM history, CFO/Capex/FCF, FCFE.1/FCFE.2,
+> SSGR, value-per-₹-RE, the turnover block). Every formula has been extracted below, so I can use the xlsx directly OR
+> rebuild the identical dashboard on the fly in code when Excel isn't practical. **Ships with sample data (Hester Biosciences)
+> — always work on a COPY, keep the repo original pristine.**
+
+**Three usage paths (pick per situation):**
+1. **With a screener.in account:** upload the template once at `screener.in/excel/` → every company page's "Export to Excel" then downloads with the full analysis auto-computed (free account suffices).
+2. **With any screener export / raw statements:** fill the *Data Sheet* rows per the input contract below; the *Analysis* sheet computes everything.
+3. **No Excel at all:** compute the dashboard directly with the formula map + code recipe below (this is what "create the template on the fly" means — the LAYOUT is the tool, not the .xlsx).
+
+**DATA SHEET input contract (10 annual columns B…K, oldest→newest; quarterly H…K = last 4):**
+```
+META:    B6 shares outstanding · B7 face value · B8 current price · B9 market cap
+P&L:     R16 report dates · R17 Sales · R18 Raw material cost · R19 Change in inventory
+         R20 Power & fuel · R21 Other mfr exp · R22 Employee cost · R23 Selling & admin
+         R24 Other expenses · R25 Other income · R26 Depreciation · R27 Interest
+         R28 PBT · R29 Tax · R30 Net profit · R31 Dividend amount
+QUARTERS:R41 dates · R42 Sales · R43 Expenses(incl. exceptionals! §2[V10]) · R44 Other income
+         R45 Dep · R46 Interest · R47 PBT · R48 Tax · R49 Net profit · R50 Operating profit
+BALANCE: R56 dates · R57 Equity capital · R58 Reserves · R59 Borrowings(incl. CMLTD §2[V12])
+         R60 Other liabilities · R61 Total · R62 Net block · R63 CWIP · R64 Investments
+         R65 Other assets · R66 Total · R67 Receivables · R68 Inventory · R69 Cash & bank
+         R70 No. of shares · R71 New bonus shares · R72 Face value
+CASHFLOW:R81 dates · R82 CFO · R83 CFI · R84 CFF · R85 Net cash flow
+PRICE:   R90 year-end closing prices · R93 adjusted shares (formula: face-value + bonus adjusted)
+```
+
+**ANALYSIS sheet formula map (what each computed row IS — rebuild these exactly):**
+```
+Operating Profit   = Sales − RM + ΔInv − (P&F + OtherMfr + Employee + S&A + OtherExp)
+                     [RECOMPUTED from cost lines, NOT screener's OP row — a mismatch vs the
+                      company's own reported OP is itself a reclassification tell]
+OPM = OP/Sales · EBITDA = OP + OI · Tax% = Tax/PBT · NPM = PAT/Sales
+Capex_t            = ΔNFA + ΔCWIP + Dep_t          (needs prior yr → 9 usable years, cols C…K)
+FCF_t              = CFO_t − Capex_t
+NetCashGeneration  = FCF + OI + ΔDebt − Div − Interest   (the "where did cash come from/go" line)
+SSGR               = avg3(NFAT) × avg3(NPM) × (1−avg3(DPR)) − avg3(Dep/NFA)   [3-yr rolling]
+PBT/AvgNFA         (bad <10%, good >25%) · ROE on avg equity (bad <7%, good >25%)
+ROCE               = (PBT+Interest)/avg Total Assets      (bad <10%, good >35%)
+IncrementalROE(3y) = ΔPAT(3y) / Σ RE(3y)                  [is NEW retained money earning?]
+NFAT = Sales_t/avg NFA · RecDays = 365/(Sales/avg Rec) · ITR = Sales/avg Inv
+MonthsRMheldAsInv  = (365/(RM cost/avg Inv))/30 · WC cycle = RecDays + 365/ITR
+DPR = Div/PAT · RE = PAT − Div · P/E = Mcap/PAT (0 if ≤0) · Mcap_t = price_t × adjShares_t
+D/E = Debt/(EqCap+Reserves) · CostOfFunds = 12% ASSUMPTION CELL (B53 — refresh to current!)
+InterestOutgo      = avgDebt × CostOfFunds   [NORMALIZED, not reported interest]
+InterestCoverage   = OP / InterestOutgo      [a stress-test vs 12% money, not the P&L number]
+Costs as % of sales: RM% = (RM−ΔInv)/Sales · P&F% · Employee% · S&A% · OtherMfr% · Other%
+                     [→ the §2[V8] falling-RM% pricing-power proof, one row per year]
+```
+
+**Summary columns (the verdict strip on the right — these are the kill-test numbers):**
+```
+L column ("Last 4 Quarters"): TTM Sales/OP/OPM/OI/EBITDA/Int/Dep/PBT/Tax/PAT/NPM from quarterly
+         rows (guarded: blanks out if any of the last 4 quarters is missing)
+M column ("Total 10 Yr"):  ΣCFO · ΣCapex · FCF=ΣCFO−ΣCapex · FCFE.1=FCF−ΣInterest ·
+         FCFE.2=FCFE.1+ΣOI · ΣDiv · Inc-in-Debt(10y)=Debt_end−Debt_start ·
+         Surplus funds = FCFE.2 − ΣDiv + ΔDebt · FCF/CFO ratio
+N/O columns ("TRENDS"): Sales CAGR(9y) · sales-WEIGHTED avg OPM (SUMPRODUCT — a fat-year-honest
+         average) · PAT CAGR · BV growth · Div growth · P/E(TTM) · P/B · P/E×P/B (Graham's ≤22.5
+         multiplier) · Div yield · Avg historical P/E (positive-only) · Mcap CAGR ·
+         RE(10y)=ΣRE (A) · ΔMcap(10y) (B, vs closing price 10 yrs back) · VALUE PER ₹ OF RE = B/A
+```
+
+**Template conventions & gotchas (learned from the file itself):**
+- **Mcap history is split/bonus/face-value adjusted** via the R93 adjusted-shares formula — so ΔMcap(10y) and the value-per-₹-RE are corporate-action-proof. When rebuilding on the fly, replicate this or the 10-yr Mcap change is wrong.
+- **The interest-coverage row uses assumed 12% on average debt**, not reported interest — it answers "could OP service normally-priced debt?", deliberately immune to capitalized/under-booked interest (§27 Lloyds). Keep BOTH: reported-interest coverage (§2) and this normalized one.
+- **Quarterly "Expenses" includes exceptional items** (screener convention) — strip before reading TTM OPM (§2[V10]).
+- The weighted-average OPM (O4) prevents small early years from dominating a simple mean — quote THIS as "the decade's OPM."
+- FCF/capex columns begin at year 2 — never quote a "10-yr capex" that silently dropped a year.
+- **What the template does NOT contain** (add manually every time): the FUND-FLOW table from the volume datasheets — build as YoY deltas: sources = ΔEquity+Reserves, ΔDebt, ΔPayables/OtherLiab; uses = ΔFixedAssets, ΔReceivables, ΔInventory, ΔCash+Investments, ΔOtherAssets; mark inflow/outflow per cell and eyeball where the money CAME FROM and WENT (the Cigniti ₹135cr "Other Assets" siphon catch, §2[V12]) — plus the forensic rebuilds (kill-tests #14: CMLTD, IndAS gross-up, write-backs) which no spreadsheet automates.
+
+**On-the-fly rebuild recipe (when working outside Excel, implement exactly this):**
+```python
+# inputs: 10-yr lists (oldest→newest): sales, rm, dinv, pf, omfr, emp, sa, oexp, oi, dep,
+# interest, pbt, tax, pat, div, cfo, cfi, cff, debt, eqcap, reserves, nfa, cwip, invmts,
+# receiv, inv, cash, shares, bonus, fv, price; scalars: cmp, mcap_now
+op   = [s-r+d-(p+om+e+a+ox) for s,r,d,p,om,e,a,ox in zip(sales,rm,dinv,pf,omfr,emp,sa,oexp)]
+opm  = [o/s for o,s in zip(op,sales)];  npm = [p/s for p,s in zip(pat,sales)]
+capex= [nfa[i]-nfa[i-1]+cwip[i]-cwip[i-1]+dep[i] for i in range(1,10)]
+fcf  = sum(cfo[1:])-sum(capex); fcfe1 = fcf-sum(interest[1:]); fcfe2 = fcfe1+sum(oi[1:])
+nfat = [sales[i]/((nfa[i]+nfa[i-1])/2) for i in range(1,10)]
+dpr  = [dv/p if p else 0 for dv,p in zip(div,pat)]; re_ = [p-dv for p,dv in zip(pat,div)]
+a3   = lambda xs,i: sum(xs[i-2:i+1])/3
+ssgr = [a3(nfat,i-1)*a3(npm,i)*(1-a3(dpr,i))-a3([dep[j]/nfa[j] for j in range(10)],i) for i in range(3,10)]
+recd = [365*((receiv[i]+receiv[i-1])/2)/sales[i] for i in range(1,10)]
+adj  = [shares[i]*fv[i]/fv[-1]+sum(bonus[i+1:]) for i in range(10)]   # corp-action adjust
+vpre = (mcap_now - price[0]*adj[0]) / sum(re_)                        # kill-test #1
+rm_pct=[(rm[i]-dinv[i])/sales[i] for i in range(10)]                  # pricing-power row
+# verdict strip: print cPAT vs cCFO, FCF, FCFE.1/2, debt change, SSGR vs growth, vpre,
+# then run §0a kill-tests 1-16 against these numbers.
+```
+
+**Gate wiring (template row → decision gate):** value-per-₹-RE → kill-test #1 & the §5 master table · FCFE.1/.2 → kill-test #2 · SSGR row + NFAT → kill-tests #3/#16 · cPAT-vs-cCFO (M13 vs M15) → kill-test #4 · RM%-of-sales trend → kill-test #5 · weighted OPM + margin history → §2 · P/E, P/E×P/B, avg-P/E history → §5/§5b · RecDays/ITR/WC-cycle → §10 · Tax% row → §2 (tax gate) · Surplus-funds line → §7 (what did they DO with it — the lazy-treasury/§2[V11] test) · the 60-second glance (§1) reads rows {loss-years, cPAT vs cCFO, FCF, ΔDebt+dilution, SSGR-vs-growth} straight off this dashboard.
+
+**Protocol per company (the standing order):** (1) copy the template / spin the recipe; (2) load 10-yr consolidated data (§0 rules: consolidated, FY-normalized); (3) read the verdict strip against §0a kill-tests; (4) build the fund-flow table + forensic rebuilds manually; (5) only then proceed to the qualitative gates (§6 moat, §7 management) with §29d for the nearest case. The dashboard is the entry ticket, never the verdict — §7 vetoes overrule a perfect sheet.
 
 ---
 
