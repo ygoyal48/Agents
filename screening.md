@@ -97,5 +97,6 @@ One line per company. No commentary, no verdicts, no ranking — the queue is un
 - If screener.in is unreachable or the query language has changed beyond repair, write the output file with a header
   line `# STATUS: FAILED — <reason>` so the pipeline knows the queue was not refreshed, rather than silently doing nothing.
 
-**Handoff:** the analysis agent consumes the newest `To-Analyze/shortlist_*.txt`, pulls 10-yr data per name, and starts at
-`strategy.md` §1 (the 60-second glance). Your run ends when the file is saved (and committed, if you have git access).
+**Handoff:** the COLLECTION agent (Part 2, `collection.md`) consumes the newest `To-Analyze/shortlist_*.txt` and builds a
+document folder per company; the analysis agent (`strategy.md`) then works from those folders. Your run ends when the
+shortlist file is saved (and committed, if you have git access).

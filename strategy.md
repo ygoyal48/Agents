@@ -10,8 +10,10 @@
 > **Philosophy deliberately omitted.** Arguments for long-term vs trading, "stocks are businesses," motivational
 > content, why-fundamental-beats-technical, marketing of paid services — all skipped. Only decision-relevant content is here.
 >
-> **Pipeline split (multi-agent):** the SCREENING stage lives in `screening.md` and is executed by a SEPARATE agent that
-> writes shortlists to `To-Analyze/`. This file starts where that one ends (§1 = intake). Do not re-run screening from here.
+> **Pipeline split (multi-agent):** Part 1 — SCREENING lives in `screening.md` (a separate agent writes shortlists to
+> `To-Analyze/`). Part 2 — COLLECTION lives in `collection.md` (a separate agent downloads every company's documents +
+> data into `To-Analyze/<TICKER>/` with a manifest.json ledger). This file starts where those end (§1 = intake from the
+> collected folders). Do NOT re-run screening or re-download documents from here — consume what the manifest says exists.
 >
 > **Context of the source:** Indian equities (BSE/NSE), bottom-up fundamental value investing, retail/long-term horizon,
 > data source = screener.in. Currency ₹. "cr" = crore = 10 million. "lakh" = 0.1 million. Numbers in examples are circa 2014–2020.
@@ -165,8 +167,9 @@ EXCEL-TEMPLATE PROTOCOL (build the dashboard for EVERY company; file: DrVijayMal
 > I (the analysis agent) do NOT re-run screens, re-derive query criteria, or second-guess the funnel — I consume its output.
 
 **My intake action:**
-- **If a shortlist exists:** read the newest `To-Analyze/shortlist_*.txt`. Each line = Name | Ticker | Mcap | P/E | D/E | Sales10yCAGR | CFO | Tags. Respect the tags: `SME`/`RECENT-IPO` → route straight to kill-tests #13/#15 before anything else; `WATCH-PRICEY` → analysis is for the watchlist, price gate will likely fail today; `IDEA-ONLY` → zero screen credibility, full pipeline mandatory.
-- **If given a ticker directly (by the user or a queue file):** pull 10-yr CONSOLIDATED data first (P&L, Balance Sheet, Cash Flow, Quarterly — §0 rules) and proceed.
+- **Primary path — the collected folder:** for each queued company, open `To-Analyze/<TICKER>/`. Read `manifest.json` first (what exists, what's fresh since `last_run`, whether consolidated data was available, what failed to download). The 10-yr numbers for the dashboard come from `data/*.csv` (or `data/export.xlsx`); the readable corpus is `docs/**/*.txt` with `[p.N]` page markers for citations (annual reports, credit ratings, con-calls, material announcements, RHP if SME). Do NOT re-download anything the manifest already lists — that is the collection agent's job (Part 2, `collection.md`).
+- **Shortlist tags travel with the folder:** `SME`/`RECENT-IPO` → route straight to kill-tests #13/#15 before anything else; `WATCH-PRICEY` → analysis is for the watchlist, price gate will likely fail today; `IDEA-ONLY` → zero screen credibility, full pipeline mandatory.
+- **Fallback — no collected folder (user hands me a bare ticker):** pull 10-yr CONSOLIDATED data directly (P&L, Balance Sheet, Cash Flow, Quarterly — §0 rules) and proceed; flag that the document corpus is missing so AR/rating/con-call-dependent checks (§3, §7) are marked UNVERIFIED rather than silently skipped.
 - Remember the funnel's nature: **passing the screen is not a signal** — everything below (§2–§11) still applies in full. Rejection remains the expected outcome for most names.
 
 **[V12] The 60-SECOND DATASHEET GLANCE (run before anything else — accept-for-deeper-read or reject at sight):**
@@ -1161,7 +1164,7 @@ rm_pct=[(rm[i]-dinv[i])/sales[i] for i in range(10)]                  # pricing-
 
 **Gate wiring (template row → decision gate):** value-per-₹-RE → kill-test #1 & the §5 master table · FCFE.1/.2 → kill-test #2 · SSGR row + NFAT → kill-tests #3/#16 · cPAT-vs-cCFO (M13 vs M15) → kill-test #4 · RM%-of-sales trend → kill-test #5 · weighted OPM + margin history → §2 · P/E, P/E×P/B, avg-P/E history → §5/§5b · RecDays/ITR/WC-cycle → §10 · Tax% row → §2 (tax gate) · Surplus-funds line → §7 (what did they DO with it — the lazy-treasury/§2[V11] test) · the 60-second glance (§1) reads rows {loss-years, cPAT vs cCFO, FCF, ΔDebt+dilution, SSGR-vs-growth} straight off this dashboard.
 
-**Protocol per company (the standing order):** (1) copy the template / spin the recipe; (2) load 10-yr consolidated data (§0 rules: consolidated, FY-normalized); (3) read the verdict strip against §0a kill-tests; (4) build the fund-flow table + forensic rebuilds manually; (5) only then proceed to the qualitative gates (§6 moat, §7 management) with §29d for the nearest case. The dashboard is the entry ticket, never the verdict — §7 vetoes overrule a perfect sheet.
+**Protocol per company (the standing order):** (1) copy the template / spin the recipe; (2) load 10-yr consolidated data (§0 rules: consolidated, FY-normalized) — primary source: the collected `To-Analyze/<TICKER>/data/` CSVs or `export.xlsx` (see §1 intake); (3) read the verdict strip against §0a kill-tests; (4) build the fund-flow table + forensic rebuilds manually; (5) only then proceed to the qualitative gates (§6 moat, §7 management) with §29d for the nearest case. The dashboard is the entry ticket, never the verdict — §7 vetoes overrule a perfect sheet.
 
 ---
 
