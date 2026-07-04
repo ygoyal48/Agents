@@ -68,6 +68,7 @@ WORKED-EXAMPLE LIBRARY (pattern match)→ §15
 FORMULA APPENDIX                      → §16
 PATTERN-MATCH LIBRARIES (140 cases)   → §17–§29  (find the closest case, copy its reasoning)
 FORENSIC RED-FLAG CATALOG (278 items) → §18c → §19c → §20c → §21c → §22c → §23b → §24b → §25b → §26b → §27b → §28b → §29b
+MASTER CASE INDEX (alphabetical)      → §29d   |   MASTER value-per-₹-RE TABLE → §5   |   60-SECOND GLANCE → §1
 ```
 
 **Master mental model of an ideal buy (memorize this archetype):**
@@ -171,6 +172,12 @@ Market Capitalization    > 25 cr
 - Prefer **micro/small/mid-cap** (room to re-rate into large-cap). Avoid already-famous, fully-discovered names.
 
 **My action:** if given a ticker, pull 10-yr data first (P&L, Balance Sheet, Cash Flow, Quarterly). If asked to *find* candidates, apply the screen above (tightening P/E or D/E if too many results).
+
+**[V12] The 60-SECOND DATASHEET GLANCE (run before anything else — accept-for-deeper-read or reject at sight):**
+Look at exactly five rows of the 10-yr dashboard (§17d layout): (1) loss-years count and cPAT sign; (2) cCFO vs cPAT; (3) ΣCFO vs Σcapex (→FCF sign); (4) 10-yr debt change + equity raises; (5) SSGR vs achieved growth.
+- **Glance-REJECT worked example — Inox Wind:** losses 6 of last 10 yrs (cumulative −₹766cr); cCFO **−₹700cr**; capex ₹2,100cr spent anyway; debt +₹1,859cr plus ~₹1,400cr of equity raised (IPO FY15, preferential FY23) — every rupee of capex was other people's money. REJECT in one glance; no further reading owed.
+- **Glance-ACCEPT worked example — PI Industries:** sales never declined, profits up 9 of 10 yrs (4× sales, 6× profits); cCFO ₹5,272cr **≥** cPAT ₹5,251cr (WC under control); FCF surplus ~₹2,500cr after ₹3,262cr capex; dividends ₹600cr+ paid, debt repaid, ₹3,000cr+ cash built; SSGR >25% vs 17% growth. EARNS the deep read (it still must pass §2–§11).
+- The glance replaces nothing — it only allocates my analysis time. Anything that survives it enters STEP 0 (archetype triage + kill-tests #13/#15 for SMEs/theme names).
 
 ---
 
@@ -435,6 +442,52 @@ So: SSGR is a *starting* signal; **FCF over 10 yrs is the composite truth.** Whe
 - **[V11] Pedigree is not a valuation:** Relaxo 114 and Linde 113 (on IndAS-optics margins), PGHH 67, Abbott 48 — the market grants "quality" multiples to famous names whose own histories show zero hike-tolerance, cyclical losses, or allocation ≤2–15 per ₹ retained; meanwhile Seshasayee at **4.6 sat AT the cycle peak** (the §2[V5]/§5[V9] inversion again) and Ramco's 11.9 was the correctly-priced holding-co discount. **Neither fame nor cheapness is information until the value-per-₹-RE class, the cycle position, and the accounting regime (kill-test #14) are established.**
 - **[V12] The RE-RATING ARTIFACT is now the DOMINANT value-per-₹-RE class in story-stock territory — the highest printed ratios in the whole library belong to the most manipulated names.** *Nibe* **141.17** (RE just ₹19cr; Mcap ₹13cr→₹2,650cr on defence announcements — a 50× chart, not allocation); *RIR* **97.04** (RE ₹21cr; Mcap +₹2,083cr on a semiconductor-fab story while promoters sold ₹29cr); *TechNvision* **−255.13** (NEGATIVE ₹12cr RE against +₹3,164cr of Mcap — hope re-rating on cumulative losses, the Websol −24.03 artifact at 10× scale); versus *Captain* **5.89** (passes numerically, fails everything else) and *Triveni* **2.92** (the volume's only genuine pass: real RE base ₹3,300cr, real FCF, buybacks). **Upgrade to the reading rule: on a tiny or negative RE base, an EXTREME ratio (>50 or <0) is itself a kill-test-#15 trigger — the number is measuring the pump, and it ranks the manipulated names ABOVE the honest ones. Only a solvent, retained, multi-hundred-crore RE base makes the metric comparable at all** (completes the artifact taxonomy: §5[V6] tiny-RE, §5[V8] distressed base, §5[V9] windfall multiple, §5[V10] Lloyds 130.23, §5[V11] spectrum, →[V12] re-rating dominance).
 - **[V12] Story-stock P/E census — the fourteenth source's tails:** *TechNvision* **326** (23-year cumulative LOSS), *Nibe* **273→89** (P/E falling only because the E was manufactured after the price ran), *RIR* **228→87**, *Wonder* **163** (2% NPM converter, cCFO ₹2cr), *Advait* **71**, *KPI* **57→33** on CFO-negative growth — the entire SME-froth cohort trades at multiples that need FLAWLESS decades while their own statements show negative FCFE and unconverted profits; versus *Dynamic* **27** and *Triveni* **28** (the two honest businesses — still no margin of safety: one is FCFE-negative, the other is a govt-administered cyclical bought at a non-cyclical multiple). **Fifteenth confirmation of the two-tails rule — and a new corollary: in a theme bubble, the P/E ranks the STORIES, not the businesses; the cheapest name in the cohort (Dynamic) was also the most real.**
+
+**[ALL-VOLUMES] MASTER value-per-₹-RE LOOKUP TABLE (every reading in the library, classified — place any new company on this scale before concluding):**
+
+| Reading | Company (§) | Classification — what the number actually means |
+|---|---|---|
+| 216.80 | PGHH (§28) | ARTIFACT: payout-starved denominator (90–292% payouts → RE≈0) |
+| 141.17 | Nibe (§29) | ARTIFACT: theme re-rating on tiny RE (₹19cr) — kill-test #15 trigger |
+| 130.23 | Lloyds Metals (§27) | ARTIFACT: distressed base + mining-license bet (27-yr cPAT −₹17cr) |
+| 97.04 | RIR (§29) | ARTIFACT: fab-story re-rating on ₹21cr RE while promoters sold — #15 trigger |
+| 38.67 | Tata Elxsi (§27) | GENUINE (highest clean score: real decade, debt-free) — but P/E ~88–100 |
+| 33.6 | Page Industries (§17) | GENUINE compounder |
+| 26.29 | Linde (§28) | ARTIFACT: re-rating through CCI asset sale + IndAS-115 optics |
+| 25.6 | Symphony (§17) | GENUINE (asset-light brand) |
+| 23.51 | Abbott (§28) | GENUINE-ish, flattered by 73–90% payouts |
+| 23.35 | Marksans (§25) | ARTIFACT: distressed near-zero starting Mcap (BIFR exit) |
+| 23.12 | Safari (§27) | ARTIFACT: tiny RE base (₹97cr) |
+| 21.20 | Deepak Nitrite (§26) | GENUINE business, but score rides P/E 6→29 re-rating at windfall margins |
+| 15.8 | Emami (§17) | GENUINE |
+| 15.11 | Relaxo (§28) | genuine-ish score vs P/E 114 = market paying 7.5× demonstrated quality |
+| 14.95 | Asahi (§27) | ARTIFACT: distressed FY13 start (D/E 38.6) |
+| 11.88 | Honeywell (§24) | GENUINE — but no margin of safety at P/E 48 |
+| 10.21 | Accelya (§27) | ARTIFACT: >100% payouts shrink denominator; PE-owner milking |
+| 7.85 / 7.39 | Atul / Supreme (§25) | GENUINE, trustworthy scale anchors — still AVOID on price then |
+| 6.6 | Amara Raja (§17) | GENUINE |
+| 5.89 | Captain Polyplast (§29) | numeric pass VETOED by governance/receivables — the score is not the verdict |
+| 4.4 / 3.8 / 3.1 | Natl Fittings / Kaveri / Ratnamani (§17) | GOOD (≥3 = good; get comfortable with management) |
+| 3.96 | Godfrey (§27) | the REGULATED-CAP ceiling quantified (sin-cage; low score ≈ correct pricing) |
+| 3.45 | Rushil (§28) | tiny-base caution (₹210cr RE) |
+| 2.92 | Triveni (§29) | GENUINE pass at the administered-sector ceiling (rhymes with Godfrey 3.96) |
+| 2.29 | Lincoln (§26) | clean financials, score = market pricing the GOVERNANCE (ICD funnel) |
+| 2.05 | DRL (§28) | genuine-negative signal: acquisition-write-off drag on the largest RE base |
+| 2.0 | Merck (§17) | mediocre |
+| 1.35 | Seshasayee (§28) | commodity cycle: market pays ~nothing for retained paper earnings |
+| ~1.4 | Zenith (§17) | mediocre |
+| 0.67 | Ramco (§28) | **FAIL** — retained money in cross-holdings the market correctly discounts |
+| 0.48 | Datamatics (§23) | **FAIL** — value incinerator |
+| 0.31 | Rain (§24) | **FAIL** — destroyed ₹2,620cr |
+| <0 | Noida Toll (§17) | **FAIL** |
+| −2.56 | SOM (§26) | **FAIL**, genuine-negative (Mcap −₹353cr on +₹138cr retained) |
+| −7.64 | Just Dial (§25) | **FAIL**, trustworthy-negative (platform disruption + de-rating) |
+| −13.35 | Asian Energy (§26) | meaningless: negative-RE base |
+| −24.03 | Websol (§28) | ARTIFACT: hope re-rating on accumulated losses |
+| −255.13 | TechNvision (§29) | ARTIFACT: the hope-on-losses extreme (₹3,164cr Mcap on −₹12cr RE) |
+| n/a (₹39cr RE) | India Glycols (§23) | discard: tiny-RE denominator |
+
+**Reading rule (consolidated):** trust the number only on a solvent, continuous decade with a real multi-hundred-crore RE base and a non-distressed starting Mcap; ≥3 good, ~1 mediocre, <1 fail; >50 or <0 = artifact until proven otherwise (and on a theme chart, a kill-test-#15 trigger). The classification IS the analysis.
 
 ### 5b. The 4 Principles — compute the *target investable P/E*
 
@@ -898,6 +951,16 @@ Track **business/operating/management** parameters, **not** daily price. Cadence
 
 Promoter **stake ↑** = positive (consider buying alongside); **stake ↓ consistently** or **new pledge** = investigate/concern. Track institutions only once they cross strategic 25%.
 
+**[V9]–[V12] Monitoring additions (each of these caught a live deterioration in the case library — add to the cadence):**
+- **After ANY transformative announcement by a holding** (mega order, new plant, acquisition, theme pivot): pull the **insider-trading disclosures for the following 12 months** — promoters/directors selling into the announcement rally is the exit signal itself (RIR ₹29cr; Varanium's lock-in-expiry dump). Also cross-check the announcement against the counterparty/govt record before crediting it (kill-test #15b applies to holdings too).
+- **Warrant/preferential events:** any warrant allotment to promoters (note strike vs CMP, the 25/75 free-option asymmetry, lapse-and-reissue history) and any raise whose object is "working capital / general corporate purposes" — at a holding this is the WC-black-hole tell (Dynamic, Captain, Advait, Tembo §29).
+- **Annually, diff the AR against the exchange-filed copies:** auditor observations vanished from the AR copy (Linde, Websol §7[V11]); AR sections missing entirely from the exchange filing (Tembo). Also check the **CARO/auditor note on bank stock statements** — a books-vs-bank divergence is inflation of the books (Tembo ₹28.57cr vs ₹44cr).
+- **Track the subsidiary/step-down stake table YoY** (AOC-1): stakes quietly diluted (TechNvision 68.37→58.21%) or a WOS transferred to promoters (Tembo) = value exiting below the consolidation line.
+- **Rating-agency CHURN, not just the rating:** a switch of agencies after an outlook cut is a concealed downgrade (Kanchi §22; Rushil's three agencies in months §28).
+- **Resignations mid-run:** independent directors (especially marquee names — Vandrevala/Tembo), auditors, CFO/CS — treat a resignation during a price run or before results as a fire alarm, not HR news.
+- **Royalty/brand-fee %-of-sales and the family's TOTAL take across group companies, annually** (PGHH's 1.8→5.4% ramp §7[V11]; Godfrey's 2%→6–7% of PAT §7[V10]; KPI's ₹20.4cr personal royalty §29).
+- **Related-party schedule reconciled YoY against the shareholding pattern** — de-classified promoters and vanished related parties (SOM, Valiant §7[V9]) are how extraction goes dark.
+
 ---
 
 ## 14. SELL DECISION RULES (Stage 11)
@@ -914,6 +977,7 @@ Promoter **stake ↑** = positive (consider buying alongside); **stake ↓ consi
 5. **Position has become a trivially small % of portfolio** (ran up, never added) and isn't worth the monitoring burden — either pray for a dip to add meaningfully, or sell.
 
 Also exit immediately (overrides "never sell") if a **§3 fraud flag** or **§7 management integrity breach** surfaces post-purchase (e.g. self-dealing RPT, fabricated cash, delayed results signaling fraud). Don't anchor to your cost.
+**[V12] The same override fires when a HOLDING starts behaving like a story stock (kill-test #15 post-purchase):** an announcement machine spinning up, warrants to promoters timed to a price run, promoters/insiders selling into announcement-driven strength, a theme pivot via object-clause change, or filings turning incomplete/self-contradicting — any two = exit into the liquidity the story created, exactly when it feels most rewarding to stay (the RIR/Nibe/Varanium sequence viewed from the inside). A rising price on manufactured news is a SELL input, not a HOLD input.
 
 Accept that sold stocks may rise afterward — short-term price ≠ fundamentals ("voting machine short-term, weighing machine long-term").
 
@@ -983,6 +1047,8 @@ FCF                = CFO − Capex
 Capex              = Δ(Gross FA + CWIP) over the year
                    = Δ(Net FA + CWIP) + Depreciation for the year
 FCF%               = FCF / CFO
+FCFE.1             = FCF − Interest expense                [kill-test #2: the shareholder-truth; must be > 0]
+FCFE.2             = FCFE.1 + Non-operating/Other income   [datasheet convention §26–§29; strip one-off gains first]
 Fraud-adjusted CF  = CFO − Capex − Cash paid for acquisitions
 
 cPAT               = Σ PAT over 10 yrs       cCFO = Σ CFO over 10 yrs
@@ -2132,3 +2198,31 @@ FY[Jun]13→FY22: sales ₹304→368cr (**2% CAGR**; TTM ₹423cr), OPM 38–43%
 - **The honest names in a froth cohort still failed the buy test:** Dynamic Cables (real execution, FCFE −₹97cr, 16.85% promoter toll-booth) and Triveni (kill-test-#1 pass at 2.92, but a govt-administered P&L at P/E 28.4). **A bull market prices the honest and the fraudulent off the same theme; the discipline is refusing both — one on price, one on sight.**
 - **Working capital is where SME profits go to die:** cPAT-vs-cCFO gaps of 25:1 (Wonder ₹51cr:₹2cr), receivables aging in YEARS on government subsidy chains (Captain), retention money held 2 years (Advait), receivables +₹110cr in a single breakout year (Tembo). **The P&L is an opinion; the receivables ageing note is the fact.**
 - **Believe the numbers over the narrative (fourteenth confirmation).** "Defence manufacturer" (Nibe — a fan-trading shell with ₹21 lakh of gross block), "Powering Ahead" (Tembo — 76% fabric trading), "solar platform" (KPI — plot sales and a royalty meter), "Gartner-recognized product leader" (TechNvision — zero intangibles, 23-year loss), "100% pass-through" (Dynamic — margins still swing with copper), "energy transition" (Advait — ₹40cr into a stranger's bankruptcy in 3 months). **The numbers overrule the words.**
+
+### 29d. MASTER CASE INDEX (all 140 cases, alphabetical — find any company or its nearest peer in seconds)
+
+> Use: when analyzing ticker X, scan for X itself, then for its business-model twin. The § points to the full verdict card.
+
+- **A:** Abbott India §28 (MNC allocation risk) · Accelya §27 (PE-owner milking) · ADF Foods §24 (integrity-veto stack) · Advait Energy §29 (diversification-blitz story stock) · AIA Engineering §25 (deliberate-WC moat, price) · AksharChem §18 (dye commodity) · Albert David §21 · Amara Raja §17 (good, 6.6/₹) · Amber §25 (contract-mfg anti-moat) · Asahi Glass §27 (FCFE −₹237cr; duty cycles) · Ashok Leyland §24 (serial misallocation cyclical) · Asian Energy §26 (PE-funded-own-exit) · Associated Alcohols §22 (state-priced; IT raid) · Atul §25 (REAL pricing power, RM% fell)
+- **B:** Balaji Amines §20 · Beekay Steel §26 (converter-fee cushion) · Bhageria §18 · Bharat Rasayan §20 · Bodal §21 (diversification graveyard)
+- **C:** Caplin Point §18 (cash-vs-CFO puzzle) · Captain Polyplast §29 (subsidy receivables; cross-holdings) · Century Textiles §24 (group shuffle) · Chaman Lal Setia §19 · Cupid §21 · Cyient §23 (margin = currency)
+- **D:** Datamatics §23 (0.48/₹ incinerator) · Deepak Nitrite §26 (formula pass-through ≠ pricing power) · Divi's §18 · Dr Reddy's §28 (write-off treadmill) · Dynamic Cables §29 (honest SME, WC-devoured) · Dynemic §20
+- **E:** Emami §17 (15.8/₹) · Emmbi §19 (IPO-price test) · Escorts §23 (mid-cycle valuation)
+- **F:** Fiem §17 (auto-anc price-taker) · Filatex §24 (squeezed both ways) · Fineotex §23 (China-windfall) · Finolex Cables §20 · Finolex Industries §20
+- **G:** Gandhi Special Tubes §22 (good small biz, buyback) · Garware-Wall §20 · Globus Spirits §21 (state-set prices) · GM Breweries §21 · Godfrey Phillips §27 (regulated-sin cage, 3.96/₹) · Granules §19 (perpetual capex/dilution)
+- **H:** HEG §22 (P/E 2.78 AT the peak) · Heidelberg §24 (cartel-propped margin) · Hindustan Media §17 · Honeywell §24 (quality, no MoS at 48)
+- **I:** India Glycols §23 (manipulated leveraged cyclical) · India Nippon §23 (customer-captive) · Indo Count §19 · IOL Chem §25 (BASF-outage windfall) · Ion Exchange §23 (lumpy orders) · Ishan Dyes §18 · IST §19 (₹6cr sales co with ₹159cr assets)
+- **J:** Jamna Auto §26 (clawback pass-through; cycle P/E inversion) · Jenburkt §19 · Just Dial §25 (−7.64/₹; de-rating trap)
+- **K:** Kanchi Karpooram §22 (rating shopping) · Kaveri Seed §17 · KNR §21 (EPC stable-OPM illusion) · Kokuyo Camlin §22 (high P/E weak biz) · KPI Green §29 (land flywheel + royalty) · KRBL §17
+- **L:** Laurus §27 (FCFE −₹1,938cr; donor-price erosion) · Linde §28 (IndAS optics; parent RPT; sued SEBI) · Lincoln §26 (ICD funnel priced at 2.29/₹) · Lloyds Metals §27 (license bet, 130.23 artifact)
+- **M:** Machino §18 (customer-owned supplier) · Mahanagar Gas §21 (regulator-priced utility) · Maithan §20 (best ferroalloy operator, still cyclical) · Marksans §25 (BIFR-exit artifact; flag density) · MBL Infra §19 (EPC receivable balloon) · Meghmani §17 · Merck §17 · Minda §25 (scale-without-self-funding) · Monte Carlo §26 (seasonal WC; family payroll) · MRF §18 (standalone-vs-consolidated debt)
+- **N:** Nandan Denim §18 (capex treadmill) · National Fittings §17 · National Peroxide §23 (40% share, still price-taker) · Navkar §22 (capital treadmill + DPD) · Nesco §21 (exhibition rental moat) · NGL Fine Chem §26 (hawala invoices; CFI-hidden borrowings) · Nibe §29 (shell→defence 50×) · Nile §18 · NOCIL §20 · Noida Toll §17 (negative value creation)
+- **O:** Omkar Speciality §18 (pledge + splits + dilution spiral)
+- **P:** Page §17 (33.6/₹) · Paushak §24 (good biz, promoter-ATM veto) · PGHH §28 (growth-or-margin throttle; royalty ramp) · PIX §20 · PNC Infratech §26 (EPC, cleanest of its kind) · Poddar §19 · Polycab §27 (reset-speed cushions; P/E 48) · Quick Heal §22 (value eroded 50% post-IPO)
+- **R:** Rain §24 (0.31/₹ debt trap) · Ramco Industries §28 (cross-holding treasury, 0.67 FAIL) · Ratnamani §17 · Relaxo §28 (ad-rented shelf space at P/E 114) · Rexnord §17 (warrant abuse) · RHI Magnesita §27 (parent-set swap ratios) · RIR Power §29 (fab story; family sold ₹29cr) · Ruchira §19 · Rushil §28 (SME governance zoo)
+- **S:** Safari §27 (WC guzzler; warrants to 51.02%) · Sarla §17 · Seshasayee §28 (paper cycle at peak P/E 4.6) · Sharda Cropchem §27 (regulator-rented moat) · Sharda Motor §22 (family take across group) · Shri Jagdamba §22 (parallel promoter co) · Skipper §20 · SOM §26 (−2.56/₹; same-brand promoter twin) · Sonata §25 (blended-margin split) · Sreeleathers §22 (cash idle + related-party stores) · Srikalahasthi §19 · Stovec §21 (MNC parent, dividend drain) · Supreme Industries §17+§25 (conditional pass-through; P/E 42.5) · Sutlej §21 (false "highest margins" claim) · Symphony §17 (25.6/₹ asset-light)
+- **T:** Tata Elxsi §27 (rate discipline, 38.67/₹, P/E ~100) · TechNvision §29 (23-yr loss announcement machine, P/E 326) · Tembo §29 (76% trading behind defence label) · Torrent Pharma §17 (forensic pass) · Triveni Engineering §29 (administered-chain survivor, 2.92/₹) · TVS Srichakra §19
+- **U:** Ujaas Energy §17 (solar-policy story) · Ultramarine §19
+- **V:** Valiant Organics §26 (promoter co merged in at P/E 35–151) · Varanium Cloud §28 (the complete SME fraud anatomy) · Vikram Thermo §19 · Virat Crane §17 (dairy accounting oddities)
+- **W:** Websol §28 (technology treadmill; write-back earnings) · Wonder Electricals §29 (cPAT ₹51cr vs cCFO ₹2cr at P/E 163) · Wonderla §18 (good ops, land-bank RPT watch) · WPIL §23 (promoter-JV opacity)
+- **Z:** Zenith Fibres §17
