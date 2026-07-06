@@ -1,0 +1,426 @@
+[p.1]
+Rating Rationale
+Rating Rationale
+November 07, 2023 | Mumbai
+Nmdc Limited
+Ratings reaffirmed at 'CRISIL AAA/Stable/CRISIL A1+'; rated amount enhanced for Bank Debt
+Rating Action
+Total Bank Loan Facilities Rated
+Rs.9000 Crore (Enhanced from Rs.6000 Crore)
+Long Term Rating
+CRISIL AAA/Stable (Reaffirmed)
+Short Term Rating
+CRISIL A1+ (Reaffirmed)
+Note: None of the Directors on CRISIL Ratings Limited’s Board are members of rating committee and thus do not participate in discussion or assignment of any ratings. The Board of Directors also does not discuss any ratings at its meetings.
+1 crore = 10 million
+Refer to Annexure for Details of Instruments & Bank Facilities
+Detailed Rationale
+CRISIL Ratings has reaffirmed its ‘CRISIL AAA/Stable/CRISIL A1+’ ratings on the bank facilities of
+Nmdc Limited
+(NMDC)
+.
+The ratings continue to factor in the strong business risk profile of
+NMDC as the largest iron ore producer in the country, high profitability owing to low cost of production, and its strong financial risk and liquidity profiles. The ratings also reflect the strategic importance of the company to the government of India (GoI), also reflected in the majority holding by GoI and the company’s Navratna status. This also provides the company preferential treatment under the amended Mines and Mineral (D
+evelopment & Regulation) (MMDR) Act. However, business remains susceptible to inherent cyclicality in the steel industry.
+Analytical Approach
+CRISIL Ratings has combined the business and financial risk profiles of NMDC and its subsidiaries, associates and joint ventures. This is because all the entities have common management and strong business and financial linkages.
+CRISIL Ratings has also applied its criteria for notching up standalone ratings of entities based on government support. CRISIL Ratings believes NMDC will receive support from GoI in case of any exigency, considering its strategic importance and the majority ownership (60.79%).
+Please
+refer Annexure - List of entities consolidated, which captures the list of entities considered and their analytical treatment of consolidation.
+Key Rating Drivers & Detailed Description
+Strengths
+:
+Strong business risk profile as the largest iron ore producer in the country
+NMDC is the largest iron ore producer in India, with average annual production capacity of 51.8 million tonne (MT). Annual production was 40.8 MT in fiscal 2023, against 42.2 MT in fiscal 2022, whereas annual sales volumes were 38.3 MT and 40.6 MT, respectively. In fiscal 2023, the company accounted for around 16% of total iron ore production in India.
+NMDC has seven iron ore mining leases (five in Chhattisgarh and two in Karnataka) with total reserve of 1,697 MT, providing high revenue visibility with mining life of over three decades. It has environment clearances for all the mines, and long-term validity of licences (till 2035-2038) for six of the seven mines. The licence for the Kumaraswamy mine in Karnataka was renewed in fiscal 2023 and
+is valid till October 2042. NMDC plans to increase its production and evacuation capacity to around 67 MT by fisca
+l 2026.
+Healthy operating profitability
+NMDC had healthy operating margin of 50-60% over fiscals 2018-2021, supported by its stable and low-cost mining operations.
+However, as per the amended MMDR Act, 2021, NMDC has been paying a
+premium
+of 22.5% of the average selling price (in addition to existing iron ore royalty payout of 15%) on all its mines from fiscal 2022. Hence, earnings before interest, tax, depreciation and amortisation (Ebitda) margin moderated to around 49% in fiscal 2022 from 58% in fiscal 2021.
+In fiscal 2023, the operating margin contracted to around 34%. On May 21, 2022,
+to increase domestic supply, GoI hiked the export duty on iron ore to 50% from 30%, and imposed export duty of 45% on iron pellets. Since the duty imposition, NMDC had reduced its iron ore prices (fines) by more than 40% owing to increase in domestic supply. Resultantly, operating margin
+contracted because of lower realisation. Nonetheless, NMDC continues to be the lowest cost producer globally with cost of production (COP, excl
+uding statutory taxes and levies) of around Rs 1,000 per tonne. The company earns higher realisation on per tonne of iron ore, compared with industry average, owing to better ore quality with iron content of 63-65%, also among the highest grades. Thus, low cost of production and healthy realisation (Rs 4,565 per tonne in fiscal 2023 and Rs 6,298 per tonne in fiscal 2022) support high operating profitability (Ebitda of Rs 1,782 per tonne in fiscal 2023 and Rs 3,282 per tonne in fiscal 2022) and strong cash a
+ccrual.
+Majority ownership by, and significant strategic importance to, GoI, resulting in low regulatory risk
+NMDC is majority held by GoI (60.79%) and under the administrative control of the Ministry of Steel. High strategic importance to GoI is reflected in the Navratna status and leading position of the company in the domestic iron ore industry as iron ore is a key raw material for steel production. Being a public sector enterprise (PSE), NMDC receives preferential treatment under the amended MMDR Act, 2021. The act permits special powers to the government to allocate mines and renew mining licences of PSEs.
+Strong financial risk profile supported by net cash position
+Capital structure and debt protection metrics are healthy, aided by strong networth, absence of significant long-term debt and healthy operating cash accrual and cash balance, resulting in net cash position over the years. Gearing and total outside liabilities to tangible networth ratio were 0.02 time (0.10 time in fiscal 2022) and 0.24 time (0.29 time), respectively, as on March 31, 2023, and are expected below 0.1 time and 0.3 time, respectively, over the medium term. Net cash accrual to total debt ratio
+was 11.64 times in fiscal 2023, against 3.01 times in fiscal 2022. Furthermore, while NMDC is in the process of increasing its capacity, CRISIL Ratings understands that the capital expenditure (capex) undertaken for the same will be funded through internal accrual. Resultantly, NMDC is expected to continue maintaining its strong financial risk profile over the medium term.
+Weakness
+:
+Susceptibility to inherent cyclicality in the steel sector
+Iron ore is the key raw material for production of steel, which is an inherently cyclical industry. NMDC sells around 70% of its iron ore to three counterparties: Rashtriya Ispat Nigam Ltd, JSW Steel Ltd and Arcelor
+m
+ittal Nippon Steel India Ltd (erstwhile Essar Steel Ltd; ‘CRISIL AA-/Stable/CRISIL A1+’). This makes the company vulnerable to decline in demand or realisation during a downturn in the steel industry and could impact the volume and operating cash flow. However, low cost of production and high ore quality offer some cushion against the offtake risk.
+Liquidity:
+Superior
+Liquidity is supported by healthy cash accrual (despite significant dividend payout and capex incurred over the years), low bank limit utilisation and no major term debt obligation. Cash accrual was around Rs 4,800 crore in fiscal 2023 (around Rs 4,300 crore in fiscal 2022) against negligible term debt obligation. Annual capex of around Rs 2,000 crore, earmarked for expanding iron ore capacity in fiscal 2024, will be funded through internal accrual. As on June 30, 2023, net cash balance stood at Rs 11,279 c
+rore.
+ESG profile
+CRISIL Ratings believes the environment, social and governance (ESG) profile of NMDC supports its already strong credit risk profile.
+The mining sector has significant impact on the environment owing to higher emissions, waste generation and water consumption. This is because of the energy-intensive mining process and conversion of iron ore into pellets, which has high dependance on natural resources such as coking coal and iron ore (key inputs). The sector’s social impact includes the nature of its operat
+ions, affecting the local community and the health hazards involved.
+Key ESG highlights:
+With the government’s green energy initiative focusing more on renewable energies, NMDC has set up solar power projects at its office premises. This includes a 30-kilowatt rooftop solar power generation unit at the head office, and 1 MW rooftop solar power generation at production units.
+NMDC is working towards zero-waste mining by maximising utilisation of various grades of iron ore (more than 45% of iron).
+All the
+permanent employees (100%) are members of their respective recognized employee associations
+As a result of the all-round measures being taken by the company, attrition from NMDC has been marginal despite the remote locations of its mines.
+NMDC research and development has implemented an integrated management system comprising ISO 9001: 2015 (Quality Management System), ISO 14001: 2015 (Environment Management System), OHSAS 18001: 2007 (Occupational Health and Safety Assessment System) and SA 8000: 2014 (Soc
+ial Accountability).
+Outlook
+:
+Stable
+CRISIL Ratings believes NMDC will maintain its leading market position in the domestic iron industry and continue to benefit from its low cost of production, resulting in healthy cash accrual.
+Rating Sensitivity factors
+Downward factors:
+Significant decline in production or operating margin, leading to material deterioration in cash accrual
+Any major debt-funded capex weakening the capital structure
+Reduction in GoI holding to less than 51% resulting in diluted importance to the central government
+About the Company
+NMDC, incorporated in 1958, is a Navaratna PSE, primarily involved in iron ore mining. It is under the administrative control of the Ministry of Steel, GoI. It has seven operational iron ore mining leases: five in Chhattisgarh and two in Karnataka. NMDC is listed on the Bombay Stock Exchange and the National Stock Exchange. Its market capitalisation stood at Rs 30,713 crore as on May 18, 2023.
+Key financial indicators (
+C
+onsolidated)
+*
+Particulars
+Unit
+2023
+2022
+Operating
+income
+Rs crore
+17,607
+25,815
+Profit after tax
+(PAT)
+Rs crore
+5,603
+9,427
+PAT margin
+%
+31.8
+36.5
+Adjusted debt /
+adjusted
+networth
+Times
+0.02
+0.10
+Adjusted interest coverage
+Times
+91.58
+341.16
+* As per analytical adjustments made by CRISIL Ratings
+Any other information
+:
+Not applicable
+Note on complexity levels of the rated instrument:
+CRISIL Ratings` complexity levels are assigned to various types of financial instruments and are included (where applicable) in the 'Annexure - Details of Instrument' in this Rating Rationale.
+CRISIL Ratings will disclose complexity level for all securities - including those that are yet to be placed - based on available information. The complexity level for instruments may be updated, where required, in the rating rationale published subsequent to the issuance of the instrument when details on such features are available.
+For more details on the CRISIL Ratings` complexity levels please visit
+www.crisilratings.com
+. Users may also call the Customer Service Helpdesk with queries on specific instruments.
+Annexure - Details of Instrument(s)
+ISIN
+Name of instrument
+Date of allotment
+Coupon rate (%)
+Maturity date
+Issue size
+(Rs crore)
+Complexity level
+Rating assigned with outlook
+NA
+Fund-Based Facilities
+NA
+NA
+NA
+6,150
+NA
+CRISIL AAA/Stable
+NA
+Non-Fund Based Limit
+NA
+NA
+NA
+2,850
+NA
+CRISIL A1+
+Annexure – List of entities consolidated
+Names of entities consolidated
+Consolidation approach
+Rationale for consolidation
+J&K Mineral Development Corporation Ltd
+Full consolidation
+Significant managerial, operational and financial linkages
+Karnataka Vijaynagar Steel Ltd
+Full consolidation
+NMDC CSR Foundation
+Full consolidation
+Bastar Railways Pvt Ltd
+Equity method
+NMDC CMDC Ltd
+Equity method
+Jharkhand Mineral Development Corporation Ltd
+Equity method
+International Coal Ventures (Pvt) Ltd
+Equity method
+Krishnapatnam7 Railway Company Ltd
+Equity method
+Chhattisgarh Mega Steel Ltd
+Equity method
+Annexure - Rating History for last 3 Years
+Current
+2023 (History)
+2022
+2021
+2020
+Start of 2020
+Instrument
+Type
+Outstanding Amount
+Rating
+Date
+Rating
+Date
+Rating
+Date
+Rating
+Date
+Rating
+Rating
+Fund Based Facilities
+LT
+6150.0
+CRISIL AAA/Stable
+26-05-23
+CRISIL AAA/Stable
+30-11-22
+CRISIL AA/Watch Negative,CRISIL AAA/Stable
+26-10-21
+CRISIL AAA/Watch Negative,CRISIL AAA/Stable
+--
+--
+--
+28-02-23
+CRISIL AA/Watch Negative,CRISIL AAA/Stable
+01-09-22
+CRISIL AAA/Watch Negative,CRISIL AAA/Stable
+--
+--
+--
+--
+--
+03-06-22
+CRISIL AAA/Watch Negative,CRISIL AAA/Stable
+--
+--
+--
+--
+--
+07-03-22
+CRISIL AAA/Watch Negative,CRISIL AAA/Stable
+--
+--
+--
+--
+--
+24-01-22
+CRISIL AAA/Watch Negative,CRISIL AAA/Stable
+--
+--
+--
+Non-Fund Based Facilities
+ST
+2850.0
+CRISIL A1+
+26-05-23
+CRISIL A1+
+30-11-22
+CRISIL A1+
+26-10-21
+CRISIL A1+
+--
+--
+--
+28-02-23
+CRISIL A1+
+01-09-22
+CRISIL A1+
+--
+--
+--
+--
+--
+03-06-22
+CRISIL A1+
+--
+--
+--
+--
+--
+07-03-22
+CRISIL A1+
+--
+--
+--
+--
+--
+24-01-22
+CRISIL A1+
+--
+--
+--
+All amounts are in Rs.Cr.
+Annexure - Details of Bank Lenders & Facilities
+Facility
+Amount (Rs.Crore)
+Name of Lender
+Rating
+Fund-Based Facilities
+50
+IndusInd Bank Limited
+CRISIL AAA/Stable
+Fund-Based Facilities
+50
+State Bank of India
+CRISIL AAA/Stable
+Fund-Based Facilities
+3650
+State Bank of India
+CRISIL AAA/Stable
+Fund-Based Facilities
+5
+YES Bank Limited
+CRISIL AAA/Stable
+Fund-Based Facilities
+195
+ICICI Bank Limited
+CRISIL AAA/Stable
+Fund-Based Facilities
+200
+The South Indian Bank Limited
+CRISIL AAA/Stable
+Fund-Based Facilities
+2000
+Union Bank of India
+CRISIL AAA/Stable
+Non-Fund Based Limit
+500
+YES Bank Limited
+CRISIL A1+
+Non-Fund Based Limit
+800
+ICICI Bank Limited
+CRISIL A1+
+Non-Fund Based Limit
+700
+IndusInd Bank Limited
+CRISIL A1+
+Non-Fund Based Limit
+50
+State Bank of India
+CRISIL A1+
+Non-Fund Based Limit
+800
+State Bank of India
+CRISIL A1+
+Criteria Details
+Links to related criteria
+CRISILs Approach to Financial Ratios
+CRISILs Bank Loan Ratings - process, scale and default recognition
+Rating criteria for manufaturing  and service sector companies
+Rating Criteria for Mining Industry
+CRISILs Criteria for rating short term debt
+CRISILs Criteria for Consolidation
+Criteria for Notching up Stand Alone Ratings of Entities Based on Government Support
+Media Relations
+Analytical Contacts
+Customer Service Helpdesk
+Aveek Datta
+Media Relations
+CRISIL Limited
+M: +91 99204 93912
+B: +91 22 3342 3000
+AVEEK.DATTA@crisil.com
+Prakruti Jani
+Media Relations
+CRISIL Limited
+M: +91 98678 68976
+B: +91 22 3342 3000
+PRAKRUTI.JANI@crisil.com
+Rutuja Gaikwad
+Media Relations
+CRISIL Limited
+B: +91 22 3342 3000
+Rutuja.Gaikwad@ext-crisil.com
+Manish Kumar Gupta
+Senior Director
+CRISIL Ratings Limited
+B:
++91 124 672 2000
+manish.gupta@crisil.com
+Ankit Hakhu
+Director
+CRISIL Ratings Limited
+B:
++91 124 672 2000
+ankit.hakhu@crisil.com
+Juhi Chhabria
+Senior Rating Analyst
+CRISIL Ratings Limited
+B:
++91 22 3342 3000
+Juhi.Chhabria@crisil.com
+Timings: 10.00 am to 7.00 pm
+Toll free Number:1800 267 1301
+For a copy of Rationales / Rating Reports:
+CRISILratingdesk@crisil.com
+For Analytical queries:
+ratingsinvestordesk@crisil.com
+Note for Media:
+This rating rationale is transmitted to you for the sole purpose of dissemination through your newspaper/magazine/agency. The rating rationale may be used by you in full or in part without changing the meaning or context thereof but with due credit to CRISIL Ratings. However, CRISIL Ratings alone has the sole right of distribution (whether directly or indirectly) of its rationales for consideration or otherwise through any media including websites and portals.
+About CRISIL Ratings Limited (A subsidiary of CRISIL Limited, an S&P Global Company)
+CRISIL Ratings pioneered the concept of credit rating in India in 1987. With a tradition of independence, analytical rigour and innovation, we set the standards in the credit rating business. We rate the entire range of debt instruments, such as bank loans, certificates of deposit, commercial paper, non-convertible/convertible/partially convertible bonds and debentures, perpetual bonds, bank hybrid capital instruments, asset-backed and mortgage-backed securities, partial guarantees and other structured debt instruments. We have rated over 33,000 large and mid-scale corporates and financial institutions. We have also instituted several innovations in India in the rating business, including ratings for municipal bonds, partially guaranteed instruments and infrastructure investment trusts (InvITs).
+CRISIL Ratings Limited ('CRISIL Ratings') is a wholly-owned subsidiary of CRISIL Limited ('CRISIL'). CRISIL Ratings Limited is registered in India as a credit rating agency with the Securities and Exchange Board of India ("SEBI").
+For more information, visit
+www.crisilratings.com
+About CRISIL Limited
+CRISIL is a leading, agile and innovative global analytics company driven by its mission of making markets function better.
+It i
+s India’s foremost provider of ratings, data, research, analytics and solutions with a strong track record of growth, culture of innovation, and global footprint.
+It has delivered independent opinions, actionable insights, and efficient solutions to over 100,000 customers through businesses that operate from India, the US, the UK, Argentina, Poland, China, Hong Kong and Singapore.
+It is majority owned by S&P Global Inc, a leading provider of transparent and independent ratings, benchmarks, analytics and data to the capital and commodity markets worldwide.
+For more information, visit
+www.crisil.com
+Connect with us:
+TWITTER
+|
+LINKEDIN
+|
+YOUTUBE
+|
+FACEBOOK
+CRISIL PRIVACY NOTICE
+CRISIL respects your privacy. We may use your contact information, such as your name, address and email id to fulfil your request and service your account and to provide you with additional information from CRISIL. For further information on CRISIL's privacy policy please visit
+www.crisil.com
+.
+DISCLAIMER
+This disclaimer is part of and applies to each credit rating report and/or credit rating rationale ('report') that is provided by CRISIL Ratings Limited ('CRISIL Ratings'). To avoid doubt, the term 'report' includes the information, ratings and other content forming part of the report. The report is intended for the jurisdiction of India only. This report does not constitute an offer of services. Without limiting the generality of the foregoing, nothing in the report is to be construed as CRISIL Ratings providing or intending to provide any services in jurisdictions where CRISIL Ratings does not have the necessary licenses and/or registration to carry out its business activities referred to above. Access or use of this report does not create a client relationship between CRISIL Ratings and the user.
+We are not aware that any user intends to rely on the report or of the manner in which a user intends to use the report. In preparing our report we have not taken into consideration the objectives or particular needs of any particular user. It is made abundantly clear that the report is not intended to and does not constitute an investment advice. The report is not an offer to sell or an offer to purchase or subscribe for any investment in any securities, instruments, facilities or solicitation of any kind to enter into any deal or transaction with the entity to which the report pertains. The report should not be the sole or primary basis for any investment decision within the meaning of any law or regulation (including the laws and regulations applicable in the US).
+Ratings from CRISIL Ratings are statements of opinion as of the date they are expressed and not statements of fact or recommendations to purchase, hold or sell any securities/instruments or to make any investment decisions. Any opinions expressed here are in good faith, are subject to change without notice, and are only current as of the stated date of their issue. CRISIL Ratings assumes no obligation to update its opinions following publication in any form or format although CRISIL Ratings may disseminate its opinions and analysis. The rating contained in the report is not a substitute for the skill, judgment and experience of the user, its management, employees, advisors and/or clients when making investment or other business decisions. The recipients of the report should rely on their own judgment and take their own professional advice before acting on the report in any way. CRISIL Ratings or its associates may have other commercial transactions with the entity to which the report pertains.
+Neither CRISIL Ratings nor its affiliates, third-party providers, as well as their directors, officers, shareholders, employees or agents (collectively, 'CRISIL Ratings Parties') guarantee the accuracy, completeness or adequacy of the report, and no CRISIL Ratings Party shall have any liability for any errors, omissions or interruptions therein, regardless of the cause, or for the results obtained from the use of any part of the report. EACH CRISIL RATINGS PARTY DISCLAIMS ANY AND ALL EXPRESS OR IMPLIED WARRANTIES, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF MERCHANTABILITY, SUITABILITY OR FITNESS FOR A PARTICULAR PURPOSE OR USE. In no event shall any CRISIL Ratings Party be liable to any party for any direct, indirect, incidental, exemplary, compensatory, punitive, special or consequential damages, costs, expenses, legal fees or losses (including, without limitation, lost income or lost profits and opportunity costs) in connection with any use of any part of the report even if advised of the possibility of such damages.
+CRISIL Ratings may receive compensation for its ratings and certain credit-related analyses, normally from issuers or underwriters of the instruments, facilities, securities or from obligors. Public ratings and analysis by CRISIL Ratings, as are required to be disclosed under the regulations of the Securities and Exchange Board of India (and other applicable regulations, if any), are made available on its website, www.crisilratings.com (free of charge). Reports with more detail and additional information may be available for subscription at a fee - more details about ratings by CRISIL Ratings are available here: www.crisilratings.com.
+CRISIL Ratings and its affiliates do not act as a fiduciary. While CRISIL Ratings has obtained information from sources it believes to be reliable, CRISIL Ratings does not perform an audit and undertakes no duty of due diligence or independent verification of any information it receives and/or relies on in its reports. CRISIL Ratings has established policies and procedures to maintain the confidentiality of certain non-public information received in connection with each analytical process. CRISIL Ratings has in place a ratings code of conduct and policies for managing conflict of interest. For details please refer to:
+https://www.crisil.com/en/home/our-businesses/ratings/regulatory-disclosures/highlighted-policies.html
+.
+Rating criteria by CRISIL Ratings are generally available without charge to the public on the CRISIL Ratings public website, www.crisilratings.com. For latest rating information on any instrument of any company rated by CRISIL Ratings, you may contact the CRISIL Ratings desk at crisilratingdesk@crisil.com, or at (0091) 1800 267 1301.
+This report should not be reproduced or redistributed to any other person or in any form without prior written consent from CRISIL Ratings.
+All rights reserved @ CRISIL Ratings Limited. CRISIL Ratings is a wholly owned subsidiary of CRISIL Limited.
+CRISIL Ratings uses the prefix 'PP-MLD' for the ratings of principal-protected market-linked debentures (PPMLD) with effect from November 1, 2011, to comply with the SEBI circular, "Guidelines for Issue and Listing of Structured Products/Market Linked Debentures". The revision in rating symbols for PPMLDs should not be construed as a change in the rating of the subject instrument. For details on CRISIL Ratings' use of 'PP-MLD' please refer to the notes to Rating scale for Debt Instruments and Structured Finance Instruments at the following link:
+https://www.crisil.com/en/home/our-businesses/ratings/credit-ratings-scale.html

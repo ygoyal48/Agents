@@ -1,0 +1,134 @@
+{
+  "company": "Party Cruisers Ltd",
+  "ticker": "PARTYCRUS",
+  "screener_url": "https://www.screener.in/company/PARTYCRUS/consolidated/",
+  "tags": [
+    "SME"
+  ],
+  "first_collected": "2026-07-06",
+  "last_run": "2026-07-06",
+  "collection_status": "partial",
+  "consolidated_available": true,
+  "documents": [
+    {
+      "url": "https://www.screener.in/company/PARTYCRUS/consolidated/",
+      "type": "data-page",
+      "period": "2026-07-06",
+      "title": "screener financial tables",
+      "fetched_at": "2026-07-06",
+      "sha256": null,
+      "bytes": null,
+      "saved_as": "data/",
+      "text_as": null,
+      "parse_status": "ok"
+    },
+    {
+      "url": "https://archives.nseindia.com/annual_reports/SME_AR_28463_PARTYCRUS_2024_2025_A_16048904_04092025185423.pdf",
+      "type": "annual-report",
+      "period": "FY2025",
+      "title": "Annual Report FY2025",
+      "fetched_at": "2026-07-06",
+      "saved_as": "docs/annual-reports/AR_FY2025.pdf",
+      "bytes": 16048904,
+      "sha256": "279c122603e02495d68f621ac47941fe5e5f790dc9162f5abba6b59839608ea6",
+      "text_as": "docs/annual-reports/AR_FY2025.txt",
+      "parse_status": "ok"
+    },
+    {
+      "url": "https://archives.nseindia.com/annual_reports/SME_AR_25536_PARTYCRUS_2023_2024_03092024152723.pdf",
+      "type": "annual-report",
+      "period": "FY2024",
+      "title": "Annual Report FY2024",
+      "fetched_at": "2026-07-06",
+      "saved_as": "docs/annual-reports/AR_FY2024.pdf",
+      "bytes": 3114351,
+      "sha256": "3eaf6fd411cf1467e816e2fdde3b4131181c56e9c997cc3c5b220fc18f6ef203",
+      "text_as": "docs/annual-reports/AR_FY2024.txt",
+      "parse_status": "ok"
+    },
+    {
+      "url": "https://archives.nseindia.com/annual_reports/SME_AR_23685_PARTYCRUS_2022_2023_06092023192607_09062023200016.zip",
+      "type": "annual-report",
+      "period": "FY2023",
+      "title": "Annual Report FY2023",
+      "fetched_at": "2026-07-06",
+      "saved_as": "docs/annual-reports/AR_FY2023.pdf",
+      "bytes": 1604718,
+      "sha256": "4f440b11ce771ddf545dccb745acafefcbf1c7fd77b6754952bd867bfa7e7ea9",
+      "text_as": "docs/annual-reports/AR_FY2023.txt",
+      "parse_status": "ok"
+    },
+    {
+      "url": "https://archives.nseindia.com/annual_reports/SME_AR_21692_PARTYCRUS_2021_2022_08092022003132_09082022070025.zip",
+      "type": "annual-report",
+      "period": "FY2022",
+      "title": "Annual Report FY2022",
+      "fetched_at": "2026-07-06",
+      "saved_as": "docs/annual-reports/AR_FY2022.pdf",
+      "bytes": 28448090,
+      "sha256": "c7bd6ee8ee28d8d305758cc1acf641226921dcd7b17381862a82160a2c5d7284",
+      "text_as": "docs/annual-reports/AR_FY2022.txt",
+      "parse_status": "ok"
+    },
+    {
+      "url": "https://archives.nseindia.com/annual_reports/SME_AR_19690_PARTYCRUS_2020_2021_08092021004412_09082021070022.zip",
+      "type": "annual-report",
+      "period": "FY2021",
+      "title": "Annual Report FY2021",
+      "fetched_at": "2026-07-06",
+      "saved_as": "docs/annual-reports/AR_FY2021.pdf",
+      "bytes": 22880589,
+      "sha256": "5b1a9780ed855fb574f5b79a6cdc0f53ead3423650bf26bc31ef86ecd3f5ce80",
+      "text_as": "docs/annual-reports/AR_FY2021.txt",
+      "parse_status": "ok"
+    },
+    {
+      "url": "https://archives.nseindia.com/corporate/PARTYCRUS_20052023135104_Investor_Presen_March31_2023_Final.pdf",
+      "type": "concall-ppt",
+      "period": "2023-05",
+      "title": "Concall 2023-05 ppt",
+      "fetched_at": "2026-07-06",
+      "saved_as": "docs/concalls/Concall_2023-05_ppt.pdf",
+      "bytes": 1006073,
+      "sha256": "ff5867156c5d6925685ab2469327b275dfea13018775dee2521e7b4b06b81a5b",
+      "text_as": "docs/concalls/Concall_2023-05_ppt.txt",
+      "parse_status": "ok"
+    },
+    {
+      "url": "https://archives.nseindia.com/corporate/PARTYCRUS_13032023114837_Investors_presentation.pdf",
+      "type": "concall-ppt",
+      "period": "2023-03",
+      "title": "Concall 2023-03 ppt",
+      "fetched_at": "2026-07-06",
+      "saved_as": "docs/concalls/Concall_2023-03_ppt.pdf",
+      "bytes": 8069116,
+      "sha256": "64fcfea6c9bd11359369987a49a4c81552a9dfdfc4aa85f0f3a44a818218630a",
+      "text_as": "docs/concalls/Concall_2023-03_ppt.txt",
+      "parse_status": "ok"
+    },
+    {
+      "url": "https://www.nseindia.com/companies-listing/corporate-filings-announcements?symbol=PARTYCRUS&tabIndex=sme",
+      "type": "announcement",
+      "period": "2026-06-22",
+      "title": "Clarification - Financial Results",
+      "fetched_at": "2026-07-06",
+      "saved_as": "docs/announcements/2026-06-22_clarification-financial-results.html",
+      "bytes": 326202,
+      "sha256": "1a4d18e929e52cd4b85315645cc2be6db0bb6d352b818901477a2a44fdde2f67",
+      "text_as": "docs/announcements/2026-06-22_clarification-financial-results.txt",
+      "parse_status": "ok"
+    },
+    {
+      "url": "https://www.sebi.gov.in/filings/public-issues/feb-2021/party-cruisers-limited_49192.html",
+      "type": "rhp",
+      "period": "2026-07-06",
+      "title": "DRHP",
+      "fetched_at": "2026-07-06",
+      "saved_as": "docs/ipo/drhp.html",
+      "bytes": 8067,
+      "sha256": "a70da3d6b4bd457bf966b05ee03ec81bf4b2059b86c29bb7c9d8d6cdd56e8cdb",
+      "text_as": "docs/ipo/drhp.txt",
+      "parse_status": "ok"
+    }
+  ]
+}

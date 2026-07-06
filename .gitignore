@@ -1,0 +1,9 @@
+# Collected raw source documents are NOT committed — they are large (GBs at scale)
+# and the analysis agent only ever reads the extracted text + CSVs + manifest.
+# We keep: docs/**/*.txt, data/*.csv, manifest.json, collection_notes.md,
+#          docs/announcements/index.csv, collection_log.txt
+# We drop: the raw downloads below (re-fetchable any time via the manifest URLs).
+To-Analyze/**/*.pdf
+To-Analyze/**/*.xlsx
+To-Analyze/**/*.zip
+To-Analyze/**/docs/**/*.html
