@@ -35,8 +35,8 @@ To-Analyze/<TICKER>/
 │   └── export.xlsx            (screener "Export to Excel" — ONLY if a logged-in session is available; else skip, note in manifest)
 ├── docs/
 │   ├── annual-reports/        AR_FY2024.pdf + AR_FY2024.txt   (target: last 10 FYs, more if listed)
-│   ├── credit-ratings/        <AGENCY>_<YYYY-MM-DD>.pdf/.txt  (ALL listed rating reports, all agencies)
-│   ├── concalls/              Concall_<FYqQ>_<transcript|ppt|notes>.pdf/.txt (all listed)
+│   ├── credit-ratings/        <AGENCY>_<YYYY-MM-DD>.(pdf|html)+.txt  (ALL listed reports, all agencies; many are HTML rationale pages, not PDFs — save the .html and extract .txt from it)
+│   ├── concalls/              Concall_<YYYY-MM>_<transcript|ppt|notes>.pdf/.txt (all listed; use the publish month — see §5 naming note)
 │   ├── announcements/         index.csv (ALL announcements, 24 months) + <YYYY-MM-DD>_<slug>.pdf/.txt for MATERIAL ones (§5.4)
 │   └── ipo/                   RHP/DRHP pdf+txt (only if Tags contain SME or RECENT-IPO — fetch from exchange/SEBI link)
 └── collection_notes.md        ← free-form: what could not be fetched and why, paywalls, dead links, oddities
@@ -90,16 +90,33 @@ Never delete manifest entries. If a document disappears from the source, keep th
 
 On `screener.in/company/<TICKER>/consolidated/`:
 - **Financial tables** (public, no login): Quarterly Results, Profit & Loss, Balance Sheet, Cash Flows, Ratios,
-  Shareholding Pattern (with quarterly pledge % under promoters), Peer comparison → scrape into `data/*.csv`.
-- **"Documents" section** (public): → **Annual Reports** (links to BSE-hosted PDFs per FY), **Credit ratings**
-  (links to CRISIL/ICRA/CARE/India Ratings/Infomerics report pages/PDFs), **Concalls** (transcript/PPT/notes links).
-- **Announcements**: the page links recent ones; the full feed is on BSE/NSE (follow the BSE link on the page).
-  Capture 24 months of metadata into `announcements/index.csv` (date, title, category, url).
+  Shareholding Pattern, Peer comparison → scrape into `data/*.csv`.
+- **"Documents" section** (public): → **Annual Reports** (links to BSE/NSE-hosted PDFs per FY — some NSE ones arrive
+  as `.zip`; unzip and keep the inner PDF), **Credit ratings** (CRISIL/ICRA/CARE/India Ratings/Infomerics — often
+  HTML rationale pages, not PDFs), **Concalls** (transcript/PPT/notes links).
+- **Announcements**: the page's inline list is only the ~5 most recent items — NOT the 24-month window. For the full
+  feed you MUST follow the BSE link and scrape BSE's announcements API/page (NSE times out in this environment; BSE
+  works). Capture 24 months of metadata into `announcements/index.csv` (date, title, category, url), then download
+  PDFs for MATERIAL items only (§5.4).
 - **Export to Excel** (login only): if a session exists, fetch to `data/export.xlsx`. If not, skip silently —
   the CSVs carry the same numbers; note `"export": "skipped-no-login"` in collection_notes.md.
 
+**LOGIN-DEPENDENT DATA (know this before you start):** anonymous scraping gets you the main financial tables, but
+two contract items need a logged-in screener session (reuse the login recipe in `screening.md` §7):
+- **Peer-comparison table** (`/api/company/<id>/peers/`) — 404s anonymously; `peers.csv` is otherwise a placeholder.
+- **Promoter-pledge %** (the shareholding schedule sub-row) — not served anonymously; without login `shareholding.csv`
+  carries promoter/FII/DII/public % but NOT pledge %. Record which you captured in `collection_notes.md`.
+If no session is available, write these as best-effort with a note rather than failing the company.
+
+**BSE returns HTTP 403 to non-browser requests.** Every BSE-hosted download (annual reports, announcement PDFs, some
+concalls) fails silently unless you send a browser `User-Agent` (a normal Chrome UA string) AND a
+`Referer: https://www.screener.in/` header. Set both on all BSE fetches. (The manifest's incremental-retry recovers
+these on a re-run, but set the headers up front.)
+
 If a link 404s or an agency page is paywalled, record `parse_status: skipped-paywall`/`download-failed` and move on —
-never stall a whole run on one document.
+never stall a whole run on one document. Note: SME RHP/DRHP documents on SEBI are usually behind a JS-rendered landing
+page with no static PDF link — save the SEBI index page + note it in collection_notes.md; the offer doc may be
+unreachable without a browser.
 
 ## 5. PER-COMPANY PROCEDURE
 
@@ -109,17 +126,21 @@ never stall a whole run on one document.
 4. **Diff the Documents section against the manifest** (§3 rule) and fetch what's new:
    - Annual reports: all listed FYs (target the last 10; take everything offered). Name `AR_FY<YYYY>.pdf`.
    - Credit ratings: every listed report. Name `<AGENCY>_<date>.pdf`.
-   - Concalls: every listed transcript/PPT/notes. Name `Concall_<FY><Q>_<kind>.pdf`.
+   - Concalls: every listed transcript/PPT/notes. **Naming:** screener only exposes the publish month, and its
+     FY-quarter mapping is ambiguous, so name by publish month — `Concall_<YYYY-MM>_<transcript|ppt|notes>.pdf` — not
+     by FY-quarter. Audio/video ("REC" / YouTube) links are non-text: skip them, note in collection_notes.md.
    - Announcements: refresh `index.csv` (24-month window). Download the PDF for MATERIAL items only — title matches any of:
      `results | investor presentation | order | contract | acquisition | merger | demerger | scheme | preferential |
       warrant | rights issue | QIP | buyback | dividend | bonus | split | pledge | resignation | appointment of
       auditor | auditor | credit rating | SEBI | penalty | fine | clarification | restructuring | one time settlement |
       default | insolvency | NCLT | open offer | delisting | name change | object clause | MOU | joint venture`.
    - If tagged SME/RECENT-IPO: fetch the RHP/DRHP via the exchange/SEBI link into `docs/ipo/`.
-5. **Extract text from every downloaded PDF** to a sibling `.txt` (same basename). Use any available tool
-   (pdftotext / python pdfplumber / etc.). REQUIREMENTS: (a) preserve reading order; (b) insert page markers
+5. **Extract text from every downloaded PDF** to a sibling `.txt` (same basename). Tooling is NOT preinstalled —
+   bootstrap it first: `apt-get update && apt-get install -y poppler-utils` (gives `pdftotext`), or
+   `pip install pdfplumber`. REQUIREMENTS: (a) preserve reading order; (b) insert page markers
    `[p.N]` at each page break — the analysis cites page numbers, this is not optional; (c) if a PDF is scanned/
-   image-only and OCR is unavailable, keep the PDF, set `parse_status: text-extraction-failed`.
+   image-only and OCR is unavailable, keep the raw file, set `parse_status: text-extraction-failed` (no OCR fallback
+   exists here). For HTML credit-rating pages, extract the visible text to `.txt` the same way.
 6. Update the manifest (every fetched doc gets an entry with sha256), set `last_run`, set `collection_status`:
    `complete` (everything listed was fetched or already present) / `partial` (some failures — list them in
    collection_notes.md) / `failed` (page unreachable).
@@ -135,6 +156,12 @@ never stall a whole run on one document.
   restartable — just run again).
 - Everything you save is text/PDF/CSV — no screenshots needed. Keep file names EXACTLY per the patterns above;
   the analysis agent globs on them.
+- **STORAGE POLICY — do NOT commit raw binaries.** Raw PDFs/xlsx/zip/HTML are large (these grew to ~370 MB for just
+  2 companies; all-23 would be multiple GB). The repo `.gitignore` excludes `To-Analyze/**/*.pdf`, `*.xlsx`, `*.zip`,
+  and `docs/**/*.html`. **Commit only** the extracted `docs/**/*.txt`, `data/*.csv`, `manifest.json`,
+  `collection_notes.md`, `announcements/index.csv`, and `collection_log.txt` — that is the entire corpus the analysis
+  agent reads. The raw files stay on the local disk (re-fetchable any time from the manifest's `url` fields) but are
+  never pushed. Do not `git add -f` a raw document.
 - Commit at the end of the run if git access exists (message: `Collect docs: <tickers> (<N> new documents)`).
 
 ## 7. BOUNDARIES (what you must NOT do)
