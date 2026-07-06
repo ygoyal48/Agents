@@ -100,3 +100,110 @@ One line per company. No commentary, no verdicts, no ranking — the queue is un
 **Handoff:** the COLLECTION agent (Part 2, `collection.md`) consumes the newest `To-Analyze/shortlist_*.txt` and builds a
 document folder per company; the analysis agent (`strategy.md`) then works from those folders. Your run ends when the
 shortlist file is saved (and committed, if you have git access).
+
+---
+
+## 7. FAST-PATH: AUTOMATED RUN RECIPE (proven working — do this, skip the trial-and-error)
+
+> This appendix records exactly how the screen was run end-to-end on 2026-07-06 so future runs go straight to the
+> working path. **screener.in requires login for custom queries** (anonymous requests redirect to `/login/`), so
+> there is a login step. Read the whole section before starting; the two gotchas (browser dead-end, CFO not in the
+> table) waste the most time if rediscovered.
+
+### 7.0 Credentials — how to supply them (NEVER hardcode them here)
+
+The login needs a screener.in email + password. **Do not write them into this file or any committed file** — a
+plaintext secret in git history is permanent and readable by anyone with repo access. Instead read them from the
+environment at run time:
+
+```bash
+export SCREENER_USER='you@example.com'
+export SCREENER_PASS='your-password'      # set in your shell, a local .env that is .gitignored, or a secret store
+```
+
+If you (a human) prefer, run the screen in your own browser and paste/export the results to the agent instead — then
+no credentials touch the automation at all. That is the zero-secret fallback and is always acceptable.
+
+### 7.1 Environment gotcha — the headless browser is a DEAD END here, don't try it
+
+In this sandbox all outbound HTTPS goes through an agent proxy whose CA is at `/root/.ccr/ca-bundle.crt`. Playwright /
+headless Chromium **cannot be made to trust that CA** — adding it to the NSS DB (`certutil`), the system store
+(`update-ca-certificates`), and passing `--proxy-server` all still end in `net::ERR_CONNECTION_RESET` /
+`handshake failed`. **Do not spend time on Playwright.** Plain HTTP via `curl` or Python `requests` honours the
+standard CA env vars and works fine through the proxy. Use that.
+
+### 7.2 Log in (get a session cookie)
+
+Django login with CSRF. Two requests: GET the form to obtain `csrfmiddlewaretoken` (hidden field) + the `csrftoken`
+cookie, then POST them back with the credentials. A **302 redirect to `/dash/`** means success; a 200 that still shows
+the login form (`errorlist`) means the credentials were rejected.
+
+```bash
+# scratch dir for the cookie jar (keep it out of the repo)
+JAR=/tmp/screener_cookies.txt
+rm -f "$JAR"
+
+# 1. GET the login page -> csrftoken cookie + csrfmiddlewaretoken field
+curl -sS -c "$JAR" https://www.screener.in/login/ -o /tmp/login.html
+CSRF=$(grep -o 'csrfmiddlewaretoken[^>]*value="[^"]*"' /tmp/login.html | grep -o 'value="[^"]*"' | cut -d'"' -f2)
+
+# 2. POST credentials (Referer + Origin headers are required)
+curl -sS -c "$JAR" -b "$JAR" \
+  -H "Referer: https://www.screener.in/login/" \
+  -H "Origin: https://www.screener.in" \
+  --data-urlencode "csrfmiddlewaretoken=$CSRF" \
+  --data-urlencode "username=$SCREENER_USER" \
+  --data-urlencode "password=$SCREENER_PASS" \
+  --data-urlencode "next=" \
+  -D /tmp/login_headers.txt -o /dev/null \
+  https://www.screener.in/login/
+grep -i '^location' /tmp/login_headers.txt   # expect: location: /dash/
+```
+
+### 7.3 Run the query
+
+The screen-builder form (`/screen/new/`) POSTs to a **GET** endpoint `/screen/raw/`. Just hit it directly with the
+baseline query from §1:
+
+```bash
+Q='Sales growth 10Years > 15 AND Price to Earning < 10 AND Debt to equity < 1 AND Cash from operations last year > 0 AND Market Capitalization > 25'
+curl -sS -G -c "$JAR" -b "$JAR" https://www.screener.in/screen/raw/ \
+  --data-urlencode "query=$Q" --data-urlencode "sort=" --data-urlencode "order=" \
+  -o /tmp/results.html
+```
+
+Parse the single `<table>` in the result. **Column order** (per `<td>`, after skipping non-`/company/` rows):
+`S.No | Name | CMP | P/E | Mar Cap | Div Yld% | NP Qtr | Qtr Profit Var% | Sales Qtr | Qtr Sales Var% | ROCE% | ROE% |
+Sales Var 10Yrs% | Debt/Eq`. Gotchas: the header row repeats once mid-table (so 23 companies came back as 25 `<tr>`s —
+filter to rows whose first `<a href>` starts with `/company/`); the page footer shows the passing count (`"23 results"`)
+but **does not** report the total universe size, so leave that field `N/A` in the output header.
+
+### 7.4 The CFO gotcha — it is NOT a screen column
+
+`Cash from operations last year` is a *filter*, but the value is **not** shown in the results table. To fill the
+`CFO-latest(cr)` output column you must open each company page and read it off the cash-flow statement:
+
+```
+GET https://www.screener.in/company/<TICKER>/            (add /consolidated/ if the results link did)
+```
+
+`<TICKER>` is whatever the results-table link uses — either the NSE symbol (e.g. `NMDC`) or the numeric BSE code
+(e.g. `521178`). In the page, find the `id="cash-flow"` section, the row starting `Cash from Operating Activity`, and
+take its **last** cell (latest year).
+
+### 7.5 Tag heuristics that worked (see §3)
+
+- **SME:** screener.in exposes no direct board-type field. A reliable tell is a **half-yearly-only reporting cadence**
+  (quarters header shows only Mar/Sep, not all four quarters) — SME-platform issuers file half-yearly under SEBI rules.
+  Tag those `SME`; the analysis agent confirms.
+- **DISCOVERED:** obvious mega-caps (e.g. NMDC, ONGC) — tag and expect the analyst's price gate to drop them.
+- **RECENT-IPO:** check listing history; if <3 yrs of data, tag it. (None qualified on the 2026-07-06 run.)
+
+### 7.6 Tooling notes
+
+- Python parsing used `requests` + `beautifulsoup4` (`pip install beautifulsoup4`; `requests` was already present).
+  Load the cookie jar with `http.cookiejar.MozillaCookieJar(JAR); .load(ignore_discard=True, ignore_expires=True)`.
+- **Log out when done** (`GET /logout/`) and delete the cookie jar — it is a live session token; keep it in a scratch
+  dir, never in the repo.
+- If login starts failing (2FA/CAPTCHA introduced, or the query language changes), fall back to the human-runs-it path
+  (§7.0) and, per §6, write the output file with a `# STATUS: FAILED — <reason>` header rather than doing nothing.
