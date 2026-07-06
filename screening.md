@@ -203,9 +203,9 @@ take its **last** cell (latest year).
 
 - Python parsing used `requests` + `beautifulsoup4` (`pip install beautifulsoup4`; `requests` was already present).
   Load the cookie jar with `http.cookiejar.MozillaCookieJar(JAR); .load(ignore_discard=True, ignore_expires=True)`.
-- **Downstream reuse:** the COLLECTION agent (`collection.md`) reuses this same login — a logged-in session is what
-  unlocks the peer-comparison table, promoter-pledge %, and Export-to-Excel (all 404 anonymously). Also note for any
-  BSE-hosted fetch: BSE returns **403 to non-browser requests** — send a Chrome `User-Agent` + `Referer: https://www.screener.in/`.
+- **Downstream note:** the COLLECTION agent (`collection.md`) fetches documents only (annual reports, credit ratings,
+  concalls, announcements) — all public, no login needed. It does NOT reuse this login. One shared gotcha though: any
+  BSE-hosted fetch returns **403 to non-browser requests** — send a Chrome `User-Agent` + `Referer: https://www.screener.in/`.
 - **Log out when done** (`GET /logout/`) and delete the cookie jar — it is a live session token; keep it in a scratch
   dir, never in the repo.
 - If login starts failing (2FA/CAPTCHA introduced, or the query language changes), fall back to the human-runs-it path

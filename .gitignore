@@ -1,9 +1,9 @@
-# Collected raw source documents are NOT committed — they are large (GBs at scale)
-# and the analysis agent only ever reads the extracted text + CSVs + manifest.
-# We keep: docs/**/*.txt, data/*.csv, manifest.json, collection_notes.md,
-#          docs/announcements/index.csv, collection_log.txt
-# We drop: the raw downloads below (re-fetchable any time via the manifest URLs).
+# Collection (collection.md) commits ONLY the aggregated .txt files + collection_notes.md
+# per company. Raw source documents are downloaded to a scratch dir, text-extracted, and
+# discarded — never committed (they are GBs at scale, and only the extracted text is read
+# by the analysis agent). These patterns are a safety net against accidentally adding a raw file.
 To-Analyze/**/*.pdf
 To-Analyze/**/*.xlsx
 To-Analyze/**/*.zip
-To-Analyze/**/docs/**/*.html
+To-Analyze/**/*.html
+To-Analyze/**/*.csv
